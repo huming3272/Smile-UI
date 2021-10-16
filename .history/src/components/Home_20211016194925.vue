@@ -12,7 +12,7 @@
         <a>开始</a>
       </p>
     </div>
-  
+  </div>
 </template>
 <style lang="scss" scoped>
   .topnar{
