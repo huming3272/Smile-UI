@@ -1,12 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <br>
-  <router-link to="/">Frank1</router-link>
-  <br>
-  <router-link to="/xxx">Frank2</router-link>
-  <hr>
-  <router-view></router-view>
-
+  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  
 </template>
 
 <script>

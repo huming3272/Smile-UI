@@ -1,6 +1,6 @@
 <template lang="">
     
-        {{name}},这是一个Frank组件
+        {{name}},这是一个vue组件
     
 </template>
 <script>

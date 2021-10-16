@@ -1,7 +1,7 @@
 <template lang="">
-    
-        {{name}},这是一个Frank组件
-    
+    <div>
+        {{name}},这是一个vue组件
+    </div>
 </template>
 <script>
 

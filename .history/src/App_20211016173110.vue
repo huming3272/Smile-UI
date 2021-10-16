@@ -1,6 +1,5 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <br>
   <router-link to="/">Frank1</router-link>
   <br>
   <router-link to="/xxx">Frank2</router-link>
