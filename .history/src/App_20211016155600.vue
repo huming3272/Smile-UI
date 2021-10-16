@@ -1,0 +1,17 @@
+<template>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <frank
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+import Frank from './components/Frank.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,Frank
+  }
+}
+</script>
