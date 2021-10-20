@@ -1,6 +1,6 @@
 <template>
-  <div>
-    222
+   <div>
+     222
     <Topnav></Topnav>
     <div class="content">
       <aside>
@@ -20,17 +20,18 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+       <main>主内容</main>
     </div>
   </div>
 </template>
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
-export default {
-  components: {
-    Topnav,
-  },
-};
+  import Topnav from "../components/Topnav.vue";
+  export default {
+    components:{
+      Topnav,
+      }
+  }
+
 </script>
 <style lang="scss" scoped>
 aside {
