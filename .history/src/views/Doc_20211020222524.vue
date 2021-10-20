@@ -33,7 +33,7 @@ export default {
   },
   setup(){
     //setup做的事情有点像用函数定义vue2的data
-    const menuVisible = inject<Ref<boolean>>('menuVisible') //get
+    const menuVisible = inject<ref<boolean>>('menuVisible') //get
     //引入名为menuVisible
     return {menuVisible}
     // return 暴露出去，才能在这个文件中使用menuVisible

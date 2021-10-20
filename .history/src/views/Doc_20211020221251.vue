@@ -36,7 +36,7 @@ export default {
     const menuVisible = inject<Ref<boolean>>('menuVisible') //get
     //引入名为menuVisible
     return {menuVisible}
-    // return 暴露出去，才能在这个文件中使用menuVisible
+    // return 暴露出去，才能在这个文件中使用
   }
 };
 </script>

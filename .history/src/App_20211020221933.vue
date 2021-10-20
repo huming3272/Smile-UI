@@ -12,10 +12,9 @@ export default {
   },
   setup(){
     const menuVisible = ref(false)
-    //定义初值，类似vue2的data
+    //定义初值
     
     provide('menuVisible',menuVisible)//set
-    //provide提供menuVisible给全局
   },
   mounted(){
       const some = ref(0)

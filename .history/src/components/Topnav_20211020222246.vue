@@ -13,7 +13,7 @@ import {inject,Ref} from 'vue'
 export default {
   setup(){
     
-    const menuVisible = inject<Ref<boolean>>('menuVisible') //get
+    const menuVisible = inject<www<boolean>>('menuVisible') //get
     //inject<Ref<boolean>>('menuVisible')
     //从全局引入menuVisible为boolean类型的Ref参数
     // menuVisible变量可以认为是data里的

@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleMenu">LOGO</div>
+    <div class="logo" @click>LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -9,20 +9,8 @@
   </div>
 </template>
 <script lang="ts">
-import {inject,Ref} from 'vue'
 export default {
-  setup(){
-    
-    const menuVisible = inject<Ref<boolean>>('menuVisible') //get
-    //inject<Ref<boolean>>('menuVisible')
-    //从全局引入menuVisible为boolean类型的Ref参数
-    // menuVisible变量可以认为是data里的
-    const toggleMenu = ()=>{
-      menuVisible.value = !menuVisible.value
-      //这里类似methods
-    }
-    return {toggleMenu}
-  }
+  
 }
 </script>
 <style lang="scss" scoped>
@@ -35,7 +23,6 @@ export default {
   > .logo {
     max-width: 6em;
     margin-right: auto;
-    cursor: pointer;
   }
   > .menu {
     display: flex;
