@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.scss'
+import './index.css'
 import {createWebHashHistory,createRouter} from 'vue-router'
-import Home from './views/Home.vue'
-import Doc from './views/Doc.vue'
+import Home from './components/Home.vue'
+import Doc from '..src/views/Doc.vue'
 
 const history = createWebHashHistory()
 // hash型路由
