@@ -31,7 +31,7 @@ export default {
     Topnav,
   },
   setup(){
-    //setup函数是处于 生命周期函数 beforeCreate 和 Created 两个钩子函数之前的函数,类似用函数定义vue2的data
+    //setup做的事情有点像在用函数定义vue2的data
     const menuVisible = inject<Ref<boolean>>('menuVisible') //get
     //引入名为menuVisible
     return {menuVisible}

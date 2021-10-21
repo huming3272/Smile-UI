@@ -31,8 +31,6 @@ export default {
 .topnav {
   background: pink;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 16px;
   position: relative;
   z-index: 10;
@@ -48,11 +46,6 @@ export default {
     > li {
       margin: 0 1em;
     }
-  }
-  > .toggleMenu {}
-  @media (max-width:500px) {
-    > .menu{display: none;} 
-    > .logo{margin: 0 auto;}
   }
 }
 </style> 

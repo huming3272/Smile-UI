@@ -1,5 +1,6 @@
 <template>
   <div>
+    222
     <Topnav></Topnav>
     <div class="content">
       <aside v-if="menuVisible">
@@ -31,8 +32,8 @@ export default {
     Topnav,
   },
   setup(){
-    //setup函数是处于 生命周期函数 beforeCreate 和 Created 两个钩子函数之前的函数,类似用函数定义vue2的data
-    const menuVisible = inject<Ref<boolean>>('menuVisible') //get
+    //setup做的事情有点像用函数定义vue2的data
+    const menuVisible = inject<Ref<arra>>('menuVisible') //get
     //引入名为menuVisible
     return {menuVisible}
     // return 暴露出去，才能在这个文件中使用menuVisible

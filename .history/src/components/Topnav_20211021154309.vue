@@ -5,7 +5,6 @@
       <li>菜单1</li>
       <li>菜单2</li>
       <li>菜单3</li>
-      <span class="toggleAside"></span>
     </ul>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default {
     const toggleMenu = ()=>{
       menuVisible.value = !menuVisible.value
       //这里类似methods
-      console.log('menuVisible',menuVisible.value)
+      console.log('menuVisible')
     }
     return {toggleMenu}
   }
@@ -31,8 +30,6 @@ export default {
 .topnav {
   background: pink;
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 16px;
   position: relative;
   z-index: 10;
@@ -48,11 +45,6 @@ export default {
     > li {
       margin: 0 1em;
     }
-  }
-  > .toggleMenu {}
-  @media (max-width:500px) {
-    > .menu{display: none;} 
-    > .logo{margin: 0 auto;}
   }
 }
 </style> 

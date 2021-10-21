@@ -49,10 +49,5 @@ export default {
       margin: 0 1em;
     }
   }
-  > .toggleMenu {}
-  @media (max-width:500px) {
-    > .menu{display: none;} 
-    > .logo{margin: 0 auto;}
-  }
 }
 </style> 
