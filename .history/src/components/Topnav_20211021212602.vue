@@ -67,6 +67,7 @@ export default {
     }
     > .toggleAside {
       display: block;
+      border:10px solid yellow;
     }
     > .logo {
       margin: 0 auto;

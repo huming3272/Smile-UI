@@ -65,9 +65,6 @@ export default {
     > .menu {
       display: none;
     }
-    > .toggleAside {
-      display: block;
-    }
     > .logo {
       margin: 0 auto;
     }

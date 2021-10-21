@@ -7,6 +7,9 @@ import {ref,provide} from 'vue'
 
 export default {
   name: 'App',
+  components: {
+
+  },
   setup(){
     const width = document.documentElement.clientWidth;
     //获取窗口宽度

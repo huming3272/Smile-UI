@@ -49,24 +49,15 @@ export default {
     }
     
   }
-  >.toggleAside {
-    width: 24px;
-    height: 24px;
-    background: red;
-    border:1px solid red;
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
-  }
+  
 
   @media (max-width: 500px) {
     > .menu {
       display: none;
-    }
-    > .toggleAside {
+      > .toggleAside {
       display: block;
+      border:10px solid yellow;
+    }
     }
     > .logo {
       margin: 0 auto;

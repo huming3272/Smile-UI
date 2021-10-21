@@ -47,9 +47,7 @@ export default {
     > li {
       margin: 0 1em;
     }
-    
-  }
-  >.toggleAside {
+    >.toggleAside {
     width: 24px;
     height: 24px;
     background: red;
@@ -60,13 +58,16 @@ export default {
     transform: translateY(-50%);
     display: none;
   }
+  }
+  
 
   @media (max-width: 500px) {
     > .menu {
       display: none;
-    }
-    > .toggleAside {
+      > .toggleAside {
       display: block;
+      border:10px solid yellow;
+    }
     }
     > .logo {
       margin: 0 auto;

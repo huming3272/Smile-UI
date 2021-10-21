@@ -7,11 +7,12 @@ import {ref,provide} from 'vue'
 
 export default {
   name: 'App',
+  components: {
+
+  },
   setup(){
-    const width = document.documentElement.clientWidth;
-    //获取窗口宽度
-    const menuVisible = ref(width <= 500 ? false : true);
-    //检测窗口宽度
+    
+    const menuVisible = ref(false)
     //定义初值，类似vue2的data
     
     provide('menuVisible',menuVisible)//set

@@ -5,8 +5,8 @@
       <li>菜单1</li>
       <li>菜单2</li>
       <li>菜单3</li>
+      <span class="toggleAside" @click="toggleMenu">333</span>
     </ul>
-    <span class="toggleAside" @click="toggleMenu">333</span>
   </div>
 </template>
 <script lang="ts">
@@ -47,9 +47,8 @@ export default {
     > li {
       margin: 0 1em;
     }
-    
   }
-  >.toggleAside {
+  > .toggleAside {
     width: 24px;
     height: 24px;
     background: red;
@@ -65,13 +64,12 @@ export default {
     > .menu {
       display: none;
     }
-    > .toggleAside {
-      display: block;
-    }
     > .logo {
       margin: 0 auto;
     }
-    
+    > .toggleAside {
+      display: inline-block;
+    }
   }
 }
 </style> 

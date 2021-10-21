@@ -64,9 +64,10 @@ export default {
   @media (max-width: 500px) {
     > .menu {
       display: none;
-    }
-    > .toggleAside {
+      > .toggleAside {
       display: block;
+      border:10px solid yellow;
+    }
     }
     > .logo {
       margin: 0 auto;
