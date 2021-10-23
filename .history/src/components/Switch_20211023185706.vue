@@ -1,0 +1,33 @@
+<template>
+    <div>
+        <ul>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+            <li>Switch文档</li>
+        </ul>
+    </div>
+</template>
+<script>
+    export default {
+    name:'switch',
+    setup(){
+    const mV = inject<Ref<boolean>>('menuVisible')
+    console.log('')
+    }
+    }
+</script>
