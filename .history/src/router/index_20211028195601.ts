@@ -5,7 +5,6 @@ import Switch from '../components/Switch.vue'
 import Button from '../components/Button.vue'
 import Dialog from '../components/Dialog.vue'
 import Tabs from '../components/Tabs.vue'
-import DocDemo from '../components/DocDemo.vue'
 
 const history = createWebHashHistory()
 // hash型路由
@@ -17,11 +16,10 @@ const history = createWebHashHistory()
         {path:'/',component:Home},
         {path:'/doc',component:Doc,
         children:[
-            {path:'',component:DocDemo},
             {path:'switch',component:Switch},
             {path:'button',component:Button},
-            {path:'Dialog',component:Dialog},
-            {path:'Tabs',component:Tabs},
+            {path:'button',component:Button},
+            {path:'button',component:Button},
         ]},
 
     ]

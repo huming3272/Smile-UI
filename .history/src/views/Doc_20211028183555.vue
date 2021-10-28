@@ -3,11 +3,7 @@
     <Topnav class="nav"></Topnav>
     <div class="content">
       <aside v-if="menuVisible">
-        <h2>
-          <router-link to='/doc'>
-            组件列表
-          </router-link>
-        </h2>
+        <h2>组件列表</h2>
         <ol>
           <li>
             <router-link to="/doc/switch">Switch 组件</router-link>
@@ -66,6 +62,7 @@ export default {
     flex-grow: 1;
     padding-top: 53px;
     padding-left: 150px;
+}
     @media (max-width: 500px) {
       padding-left: 0; 
     }

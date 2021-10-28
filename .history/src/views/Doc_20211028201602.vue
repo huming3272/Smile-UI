@@ -5,7 +5,6 @@
       <aside v-if="menuVisible">
         <h2>
           <router-link to='/doc'>
-            组件列表
           </router-link>
         </h2>
         <ol>

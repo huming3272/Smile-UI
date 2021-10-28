@@ -4,9 +4,7 @@
     <div class="content">
       <aside v-if="menuVisible">
         <h2>
-          <router-link to='/doc'>
-            组件列表
-          </router-link>
+          <router-link to=''></router-link>
         </h2>
         <ol>
           <li>
