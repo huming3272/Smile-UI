@@ -13,8 +13,8 @@ export default {
     //获取窗口宽度
     const menuVisible = ref(width <= 500 ? false : true);
     const toggleAside = ref(false)
-    
-    console.log('toggle',toggleAside.value)
+    toggleAside.value = false
+    console.log()
     //检测窗口宽度
     //定义初值，类似vue2的data
     
@@ -22,7 +22,11 @@ export default {
     //provide提供menuVisible给全局
     provide('toggleAside',toggleAside)
 
-    
+    // router.afterEach(() => {
+    //   if (width <= 500) {
+    //     menuVisible.value = false;
+    //   }
+    // });
 
   },
   

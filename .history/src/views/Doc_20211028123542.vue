@@ -41,7 +41,7 @@ export default {
     //引入名为menuVisible
     router.afterEach((to, from) => {
 
-      // menuVisible.value = false
+      menuVisible.value = false
     })
     return {menuVisible}
     // return 暴露出去，才能在这个文件中使用menuVisible

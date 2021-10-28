@@ -22,7 +22,11 @@ export default {
     //provide提供menuVisible给全局
     provide('toggleAside',toggleAside)
 
-    
+    // router.afterEach(() => {
+    //   if (width <= 500) {
+    //     menuVisible.value = false;
+    //   }
+    // });
 
   },
   

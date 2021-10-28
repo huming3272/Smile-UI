@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <router-link class="logo" to='/' >小UI框架</router-link>
+    <router-link class="logo" to='/' >LOGO</router-link>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>

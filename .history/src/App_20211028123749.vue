@@ -22,7 +22,9 @@ export default {
     //provide提供menuVisible给全局
     provide('toggleAside',toggleAside)
 
-    
+    router.afterEach(() => {
+      toggleAside.value = false
+    });
 
   },
   

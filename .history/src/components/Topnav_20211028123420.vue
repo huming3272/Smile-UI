@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <router-link class="logo" to='/' >小UI框架</router-link>
+    <div class="logo" >LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -26,12 +26,6 @@ export default {
       //这里类似methods
       
     }
-    router.afterEach((to,from) => {
-      if(to.path==='/'){
-        toggleAside.value = false
-      }
-       
-    });
     return {toggleMenu,toggleAside}
   }
 }
@@ -46,7 +40,6 @@ export default {
   justify-content: center;
   align-items: center;
   > .logo {
-    display:block;
     max-width: 6em;
     margin-right: auto;
   }
