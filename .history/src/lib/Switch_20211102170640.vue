@@ -26,7 +26,7 @@ export default {
     background: grey;
     border-radius: $h/2;
     position: relative;
-    transition: background-color 500ms;
+    transition: background-color 1s;
     span{
     position: absolute;
     top: 2px;
