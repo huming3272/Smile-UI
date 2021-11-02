@@ -7,6 +7,7 @@
           <router-link to='/doc'>
             组件列表
           </router-link>
+          <button v-on:click="back">回去</button>
         </h2>
         <ol>
           <li>

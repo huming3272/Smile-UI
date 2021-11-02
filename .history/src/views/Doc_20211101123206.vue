@@ -7,6 +7,7 @@
           <router-link to='/doc'>
             组件列表
           </router-link>
+          <button v-on:click="back">回去</button>
         </h2>
         <ol>
           <li>
@@ -52,8 +53,12 @@ export default {
     // return 暴露出去，才能在这个文件中使用menuVisible
     
   },
+,
   methods: {
-
+   back(){
+     router.back()
+     console.log('回去')
+   } 
   }
   
 };

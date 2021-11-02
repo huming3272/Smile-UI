@@ -6,6 +6,7 @@
         <h2>
           <router-link to='/doc'>
             组件列表
+            <button v-on="back()">回去</button>
           </router-link>
         </h2>
         <ol>
@@ -47,13 +48,18 @@ export default {
 
       // menuVisible.value = false
     })
-    
+    rbeforeRouteLeave(to, from, next) {
+    // 导航离开该组件的对应路由时调用
+    // 可以访问组件实例 `this`
+  }
     return {menuVisible}
     // return 暴露出去，才能在这个文件中使用menuVisible
     
   },
   methods: {
-
+   back(){
+     router.back()
+   } 
   }
   
 };

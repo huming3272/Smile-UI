@@ -6,6 +6,7 @@
         <h2>
           <router-link to='/doc'>
             组件列表
+            <button></button>
           </router-link>
         </h2>
         <ol>
@@ -47,14 +48,10 @@ export default {
 
       // menuVisible.value = false
     })
-    
     return {menuVisible}
     // return 暴露出去，才能在这个文件中使用menuVisible
     
   },
-  methods: {
-
-  }
   
 };
 </script>

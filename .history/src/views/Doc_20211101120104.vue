@@ -6,6 +6,7 @@
         <h2>
           <router-link to='/doc'>
             组件列表
+            <button v-on="back()">回去</button>
           </router-link>
         </h2>
         <ol>
@@ -53,7 +54,9 @@ export default {
     
   },
   methods: {
-
+   back(){
+     router.back()
+   } 
   }
   
 };
