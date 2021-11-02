@@ -4,9 +4,11 @@
     </button>
 </template>
 <script lang="ts">
-
+import {set}
 export default {
+    setup(){
 
+    }
 }
 </script>
 <style lang="scss" scoped>

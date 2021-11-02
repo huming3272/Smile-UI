@@ -4,9 +4,11 @@
     </button>
 </template>
 <script lang="ts">
-
+import {setUp,ref} from 'vue'
 export default {
+    setup(){
 
+    }
 }
 </script>
 <style lang="scss" scoped>
