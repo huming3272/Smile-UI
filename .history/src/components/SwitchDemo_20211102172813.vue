@@ -6,22 +6,17 @@
   </div>
 </template>
 <script lang="ts">
-import {inject,Ref,ref, watch} from 'vue'
+import {inject,Ref,ref} from 'vue'
 import Switch from '../lib/Switch.vue'
 export default {
-  name: "SwitchDemo",
+  name: "switch",
   components:{
     Switch
   },
   setup(){
-    const y = ref(true)
+    const y = ref(false)
     return{
       y
-    }
-  },
-  watch:{
-    'y':function(){
-      console.log('y',this.y)
     }
   }
 };

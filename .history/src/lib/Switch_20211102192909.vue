@@ -6,7 +6,7 @@
 <script lang="ts">
 import {ref} from 'vue'
 export default {
-    name:'Switch',
+    name:'',
     props:{
         value: Boolean,
     },

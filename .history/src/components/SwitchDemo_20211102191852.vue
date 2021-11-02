@@ -9,7 +9,7 @@
 import {inject,Ref,ref, watch} from 'vue'
 import Switch from '../lib/Switch.vue'
 export default {
-  name: "SwitchDemo",
+  name: "switch",
   components:{
     Switch
   },
@@ -20,9 +20,7 @@ export default {
     }
   },
   watch:{
-    'y':function(){
-      console.log('y',this.y)
-    }
+    'y':function()
   }
 };
 </script>

@@ -9,7 +9,7 @@
 import {inject,Ref,ref, watch} from 'vue'
 import Switch from '../lib/Switch.vue'
 export default {
-  name: "SwitchDemo",
+  name: "s",
   components:{
     Switch
   },

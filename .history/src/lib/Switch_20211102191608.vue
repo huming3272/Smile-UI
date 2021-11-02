@@ -6,14 +6,13 @@
 <script lang="ts">
 import {ref} from 'vue'
 export default {
-    name:'Switch',
     props:{
         value: Boolean,
     },
     setup(props,context){
         const toggle = ()=>{
             context.emit('input',!props.value)
-            
+            console.log('value',props.value)
         }
         return {toggle}
     }
