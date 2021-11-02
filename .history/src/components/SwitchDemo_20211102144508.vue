@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <Switch/>
+      <Switch>
     </ul>
   </div>
 </template>

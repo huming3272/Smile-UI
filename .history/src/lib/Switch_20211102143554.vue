@@ -30,10 +30,4 @@ export default {
     border-radius: $h2 / 2;
     } 
   }
-  button:hover > span{
-      left: calc(100% - #{$h2} - 2px);
-
-
-  }
-
 </style>
