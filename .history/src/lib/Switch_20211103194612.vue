@@ -39,7 +39,6 @@ export default {
     height: $h2;
     width: $h2;
     background:white;
-    box-shadow: 0 0 5px 1px rgba(0,0,0,1);
     transition: left 250ms;
     border-radius: $h2 / 2;
     } 
