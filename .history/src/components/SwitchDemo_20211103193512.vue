@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <Switch v-model:value="bool" />
+      <Switch v-model:value="y" />
     </ul>
     <hr>
     <p>
@@ -46,7 +46,7 @@ export default {
       that.$forceUpdate()
     }
     return{
-      bool,schedule,edit
+      y,schedule,edit
     }
   },
   watch:{

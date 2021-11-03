@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <Switch v-model:value="bool" />
+      <Switch v-model:value="y" />
     </ul>
     <hr>
     <p>
@@ -33,7 +33,7 @@ export default {
     setup(){
       const that = getCurrentInstance().proxy
       //改变this指向后可以使用vue2里的$forceUpdate()
-      const bool = ref(true)
+      const y = ref(true)
       const schedule = [
         {obj:'吃饭',
         result:false},
@@ -46,7 +46,7 @@ export default {
       that.$forceUpdate()
     }
     return{
-      bool,schedule,edit
+      y,schedule,edit
     }
   },
   watch:{

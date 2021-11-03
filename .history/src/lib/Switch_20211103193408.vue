@@ -46,8 +46,13 @@ export default {
     }
     &.checked > span{
       left: calc(100% - #{$h2} - 2px);
-      }
   }
-
+  }
+  button.checked{
+      background: #2d8cf0;
+  }
+  button.checked > span{
+      left: calc(100% - #{$h2} - 2px);
+  }
 
 </style>

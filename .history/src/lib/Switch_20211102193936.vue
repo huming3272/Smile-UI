@@ -6,13 +6,13 @@
 <script lang="ts">
 import {ref} from 'vue'
 export default {
-    name:'Switch',
+    name:'',
     props:{
         value: Boolean,
     },
     setup(props,context){
         const toggle = ()=>{
-            context.emit('update:value',!props.value)
+            context.emit('input',!props.value)
             
         }
         return {toggle}
@@ -27,11 +27,11 @@ export default {
     height: $h;
     width: $h*2;
     border: none;
-    background: #cccccc;
+    background: grey;
     border-radius: $h/2;
     position: relative;
     transition: background-color 500ms;
-    >span{
+    span{
     position: absolute;
     top: 2px;
     left: 2px;
@@ -41,13 +41,12 @@ export default {
     transition: left 250ms;
     border-radius: $h2 / 2;
     } 
-    &.checked{
-      background: #2d8cf0;
-    }
-    &.checked > span{
-      left: calc(100% - #{$h2} - 2px);
-      }
   }
-
+  button.checked{
+      background: blue;
+  }
+  button.checked > span{
+      left: calc(100% - #{$h2} - 2px);
+  }
 
 </style>

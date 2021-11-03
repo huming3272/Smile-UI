@@ -1,24 +1,21 @@
 <template>
   <div>
     <ul>
-      <Switch v-model:value="bool" />
+      <Switch :value="y" @input="y = $event"/>
     </ul>
     <hr>
-    <p>
-      {{schedule}}
-    </p>
     <ul>
       <li v-for="content,index of schedule" :key="index" >
         <span>
-          {{content.obj}}
+          {{content}}
         </span>
-        <Switch v-model:value="content.result"   @click="edit()"></Switch>
+        <Switch :value="content.result"></Switch>
       </li>
     </ul>
   </div>
 </template>
 <script lang="ts">
-import {inject,Ref,ref, watch,getCurrentInstance} from 'vue'
+import {inject,Ref,ref, watch} from 'vue'
 import Switch from '../lib/Switch.vue'
 export default {
   name: "SwitchDemo",
@@ -31,10 +28,8 @@ export default {
     }
   },
     setup(){
-      const that = getCurrentInstance().proxy
-      //改变this指向后可以使用vue2里的$forceUpdate()
-      const bool = ref(true)
-      const schedule = [
+    const y = ref(true)
+    const schedule = [
         {obj:'吃饭',
         result:false},
         {obj:'洗澡',
@@ -43,10 +38,10 @@ export default {
         result:true}
         ]
     const edit = ()=>{
-      that.$forceUpdate()
+      console.log(schedule)
     }
     return{
-      bool,schedule,edit
+      y,schedule,edit
     }
   },
   watch:{

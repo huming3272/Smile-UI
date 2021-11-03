@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <Switch v-model:value="bool" />
+      <Switch v-model:value="y" />
     </ul>
     <hr>
     <p>

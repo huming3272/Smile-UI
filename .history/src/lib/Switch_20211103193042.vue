@@ -31,7 +31,7 @@ export default {
     border-radius: $h/2;
     position: relative;
     transition: background-color 500ms;
-    >span{
+    span{
     position: absolute;
     top: 2px;
     left: 2px;
@@ -41,13 +41,12 @@ export default {
     transition: left 250ms;
     border-radius: $h2 / 2;
     } 
-    &.checked{
-      background: #2d8cf0;
-    }
-    &.checked > span{
-      left: calc(100% - #{$h2} - 2px);
-      }
   }
-
+  button.checked{
+      background: #2d8cf0;
+  }
+  button.checked > span{
+      left: calc(100% - #{$h2} - 2px);
+  }
 
 </style>
