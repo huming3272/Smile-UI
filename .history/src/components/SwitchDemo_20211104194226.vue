@@ -43,8 +43,8 @@ export default {
         result:true}
         ]
     const edit = ()=>{
-      that.$forceUpdate()
-
+      // that.$forceUpdate()
+      schedule.splice(1)
     }
     return{
       bool,schedule,edit

@@ -34,7 +34,7 @@ export default {
       const that = getCurrentInstance().proxy
       //改变this指向后可以使用vue2里的$forceUpdate()
       const bool = ref(true)
-      let schedule = [
+      const schedule = [
         {obj:'吃饭',
         result:false},
         {obj:'洗澡',
@@ -43,8 +43,8 @@ export default {
         result:true}
         ]
     const edit = ()=>{
-      that.$forceUpdate()
-
+      // that.$forceUpdate()
+      this.
     }
     return{
       bool,schedule,edit

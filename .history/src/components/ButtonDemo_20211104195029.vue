@@ -1,14 +1,12 @@
 <template>
   <div>
     <ul>
-      <Button>
-        一个按钮
-      </Button>
+      <Button></Button>
     </ul>
   </div>
 </template>
 <script lang="ts">
-  import Button from '../lib/Button.vue'
+  import Button from '../components/ButtonDemo.vue'
   export default {
     components:{
       Button

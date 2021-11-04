@@ -43,8 +43,8 @@ export default {
         result:true}
         ]
     const edit = ()=>{
-      that.$forceUpdate()
-
+      // that.$forceUpdate()
+      schedule = JSON.parse(JSON.stringify(schedule))
     }
     return{
       bool,schedule,edit
