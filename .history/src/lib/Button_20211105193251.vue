@@ -1,16 +1,14 @@
 <template lang="">
     <div :size='size'>
         <!-- <button v-bind="$attrs"> -->
-            <button v-bind="rest" class="gulu-button" :class="{[`theme-${theme}`]:theme}">
+            <button v-bind="rest" class="gulu-button" :class="{[`theme-${theme}`]:them}">
             <!-- 为button绑定rest得到的传入事件，两种都可以 -->
-            
+            theme:{{}}
             <slot></slot>
-            
         </button>
-        theme:{{theme}}
     </div>
 </template>
-<script lang="ts">
+<script>
 export default {
     inheritAttrs:false,
     //inheritAttrs继承，默认是true，继承一切传入的事件，给template内的第一级元素
@@ -19,8 +17,7 @@ export default {
         theme:{
             type:String,
             default: 'button'
-        },
-       
+        }
     },
     setup(props,context) {
         //非响应式对象，等同于 $attrs

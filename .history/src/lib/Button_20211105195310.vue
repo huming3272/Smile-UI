@@ -1,7 +1,7 @@
 <template lang="">
     <div :size='size'>
         <!-- <button v-bind="$attrs"> -->
-            <button v-bind="rest" class="gulu-button" :class="{[`theme-${theme}`]:theme}">
+            <button v-bind="rest" class="gulu-button" :class="{[`theme-${theme}`]:th}">
             <!-- 为button绑定rest得到的传入事件，两种都可以 -->
             
             <slot></slot>

@@ -5,9 +5,9 @@
         一个按钮
       </Button> -->
     <Button>默认</Button>
-    <Button theme="button">按钮1</Button>
-    <Button theme="link">按钮2</Button>
-    <Button theme="text">按钮3</Button>
+    <Button theme="">按钮1</Button>
+    <Button></Button>
+    <Button></Button>
     </ul>
   </div>
 </template>

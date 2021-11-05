@@ -1,13 +1,9 @@
 <template>
   <div>
     <ul>
-      <!-- <Button @click="onClick" @focus="onClick" @mouseleave="onClick" size='large'>
+      <Button @click="onClick" @focus="onClick" @mouseleave="onClick" size='large'>
         一个按钮
-      </Button> -->
-    <Button>默认</Button>
-    <Button theme="button">按钮1</Button>
-    <Button theme="link">按钮2</Button>
-    <Button theme="text">按钮3</Button>
+      <!-- </Button> -->
     </ul>
   </div>
 </template>
