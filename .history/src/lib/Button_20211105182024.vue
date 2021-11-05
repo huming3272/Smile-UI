@@ -15,6 +15,7 @@ export default {
     setup(props,context) {
         //非响应式对象，等同于 $attrs
         const {size,...rest} = context.attrs
+        
         //拿到了父传子的size参数和rest事件
         return {size,rest}
     },

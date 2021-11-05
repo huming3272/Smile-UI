@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <Button @click="onClick" @focus="onClick" @mouseleave="onClick" size='large'>
+      <Button @click="onClick">
         一个按钮
       </Button>
     </ul>
@@ -17,9 +17,7 @@
       const onClick = ()=>{
         console.log('被触发')
       }
-      return {
-        onClick
-      }
+      return {}
     }
   }
 </script>

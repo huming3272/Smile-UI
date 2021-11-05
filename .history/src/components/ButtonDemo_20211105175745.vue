@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <Button @click="onClick" @focus="onClick" @mouseleave="onClick" size='large'>
+      <Button @click="onClick" @focus="onClick" @mouseover size='large'>
         一个按钮
       </Button>
     </ul>
