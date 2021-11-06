@@ -1,12 +1,14 @@
 <template lang="">
-
+    <div :size='size'>
         <!-- <button v-bind="$attrs"> -->
             <button v-bind="rest" class="gulu-button" :class="{[`theme-${theme}`]:theme}">
             <!-- 为button绑定rest得到的传入事件，两种都可以 -->
+            
             <slot></slot>
+            
         </button>
-
-
+        theme:{{theme}}
+    </div>
 </template>
 <script lang="ts">
 export default {
@@ -54,8 +56,7 @@ div{
             margin-left: 8px;
             border:1px solid red;
         }
-        &:hover,
-        &:focus {
+        &:hover {
         color: $blue;
         border-color: $blue;
         }

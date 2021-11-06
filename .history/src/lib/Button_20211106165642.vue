@@ -1,12 +1,14 @@
 <template lang="">
-
+    <div :size='size'>
         <!-- <button v-bind="$attrs"> -->
             <button v-bind="rest" class="gulu-button" :class="{[`theme-${theme}`]:theme}">
             <!-- 为button绑定rest得到的传入事件，两种都可以 -->
+            
             <slot></slot>
+            
         </button>
-
-
+        theme:{{theme}}
+    </div>
 </template>
 <script lang="ts">
 export default {
@@ -30,7 +32,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 div{
-    
+    border:1px solid red;
     $h: 32px;
     $border-color: #d9d9d9;
     $color: #333;
@@ -52,19 +54,17 @@ div{
         box-shadow: 0 1px 0 fade-out(black, 0.95);
         & + & {
             margin-left: 8px;
-            border:1px solid red;
         }
         &:hover,
         &:focus {
         color: $blue;
         border-color: $blue;
-        }
-        &:focus {
-            outline: none;
-        }
-        &::-moz-focus-inner {
-            border: 0;
-        }
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
     }
-}
 </style>
