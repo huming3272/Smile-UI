@@ -1,9 +1,9 @@
 <template>
   <div>
     
-      <Button @click="onClick" @focus="onClick" @mouseleave="onClick" >
-        一个触发按钮
-      </Button>
+      <!-- <Button @click="onClick" @focus="onClick" @mouseleave="onClick" size='large'>
+        一个按钮
+      </Button> -->
     <div>
       <h1>示例1</h1>
       <Button>默认</Button>
@@ -20,13 +20,13 @@
     <div>
       <h1>示例3</h1>
       <Button theme="link" size="big">大大大</Button>
-      <Button theme="link">普普通通</Button>
+      <Button theme="link">普普通</Button>
       <Button size="small" theme="link">小小小</Button>
     </div>
     <div>
       <h1>示例4</h1>
       <Button size="big" theme="text">大大大</Button>
-      <Button theme="text">普普通通</Button>
+      <Button theme="text">普普通</Button>
       <Button size="small" theme="text">小小小</Button>
     </div>
     <div>
@@ -39,12 +39,8 @@
     <div>
       <h1>示例6</h1>
       <Button disabled>禁用按钮</Button>
-      <Button theme="link" disabled>禁用链接按钮</Button>
-      <Button theme="text" disabled>禁用按钮</Button>
-    </div>
-    <div>
-      <h1>示例7</h1>
-      <Button loading>加载中</Button>
+    <Button theme="link" disabled>禁用链接按钮</Button>
+    <Button theme="text" disabled>禁用按钮</Button>
     </div>
   </div>
 </template>

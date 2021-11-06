@@ -1,9 +1,9 @@
 <template>
   <div>
     
-      <Button @click="onClick" @focus="onClick" @mouseleave="onClick" >
-        一个触发按钮
-      </Button>
+      <!-- <Button @click="onClick" @focus="onClick" @mouseleave="onClick" size='large'>
+        一个按钮
+      </Button> -->
     <div>
       <h1>示例1</h1>
       <Button>默认</Button>
