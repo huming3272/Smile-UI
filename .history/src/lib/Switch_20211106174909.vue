@@ -43,15 +43,12 @@ export default {
     transition: left 250ms;
     border-radius: $h2 / 2;
     } 
-    &.gulu-checked{
+    &.checked{
       background: #2d8cf0;
     }
     &.checked > span{
       left: calc(100% - #{$h2} - 2px);
-    }
-    &.gulu-checked:active {
-        > span { width: $h2 + 4px; margin-left: -4px; }
-    }
+      }
   }
 
 

@@ -48,8 +48,8 @@ export default {
     }
     &.checked > span{
       left: calc(100% - #{$h2} - 2px);
-    }
-    &.gulu-checked:active {
+      }
+      &.gulu-checked:active {
         > span { width: $h2 + 4px; margin-left: -4px; }
     }
   }
