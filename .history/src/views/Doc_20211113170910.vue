@@ -84,10 +84,8 @@ export default {
         background: rgba(0,0,0,0.2);
       }
     }
-    >ol{
-      .router-link-active{
-        background: rgba(255, 81, 0, 0.5)
-      }
+    ol{
+
     }
       
   }

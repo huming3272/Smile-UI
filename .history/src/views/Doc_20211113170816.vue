@@ -80,16 +80,11 @@ export default {
   > aside {
     flex-shrink: 0;
     h2{
-      >.router-link-active{
+      .router-link-active{
         background: rgba(0,0,0,0.2);
       }
     }
-    >ol{
-      .router-link-active{
-        background: rgba(255, 81, 0, 0.5)
-      }
-    }
-      
+       
   }
   > main {
     flex-grow: 1;
