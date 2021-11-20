@@ -1,7 +1,7 @@
 <template>
   <div>
     <Button @click="toggle">弹框显示</Button>
-    <Dialog v-model:visible="x"></Dialog>
+    <Dialog v-model:visible></Dialog>
   </div>
 </template>
 <script lang='ts'>

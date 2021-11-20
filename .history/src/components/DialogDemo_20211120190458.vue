@@ -1,7 +1,7 @@
 <template>
   <div>
     <Button @click="toggle">弹框显示</Button>
-    <Dialog v-model:visible="x"></Dialog>
+    <Dialog></Dialog>
   </div>
 </template>
 <script lang='ts'>
@@ -14,13 +14,7 @@ export default {
     Button,
   },
   setup(){
-    const x = ref(false)
-    const toggle = ()=>{
-      x.value = !x.value
-    }
-    return{
-      x,toggle
-    }
+    const x = ref()
   }
 };
 </script>

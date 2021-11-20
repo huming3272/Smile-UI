@@ -1,25 +1,22 @@
 <template>
-  <template v-if="visible">
-    <div class="gulu-dialog-overlay"></div>
-    <div class="gulu-dialog-wrapper">
-      <div class="gulu-dialog">
-        <header>
-          标题 <span class="gulu-dialog-close" @click="toggle"></span>
-        </header>
-        <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
-        </main>
-        <footer>
-          <Button level="main">OK</Button>
-          <Button @click="toggle">Cancel</Button>
-        </footer>
-      </div>
-    </div>
-  </template>
+
 </template>
-
-
+<template v-if="visible">
+  <div class="gulu-dialog-overlay"></div>
+  <div class="gulu-dialog-wrapper">
+    <div class="gulu-dialog">
+      <header>标题 <span class="gulu-dialog-close" @click="toggle"></span></header>
+      <main>
+        <p>第一行字</p>
+        <p>第二行字</p>
+      </main>
+      <footer>
+        <Button level="main">OK</Button>
+        <Button>Cancel</Button>
+      </footer>
+    </div>
+  </div>
+</template>
 <script lang="ts">
 import Button from "./Button.vue";
 export default {
@@ -30,17 +27,17 @@ export default {
     visible: {
       type: Boolean,
       default: false,
-    },
+    }
   },
-  setup(props, context) {
-    const toggle = () => {
-      context.emit("update:visible", !props.visible);
-      console.log(props.visible);
-    };
+  setup(props,context){
+    const toggle = ()=>{
+      context.emit('update:toggle',true)
+      console.log(props.visible)
+    }
     return {
-      toggle,
-    };
-  },
+      toggle
+    }
+  }
 };
 </script>
 <style lang="scss">

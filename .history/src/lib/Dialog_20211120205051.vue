@@ -12,13 +12,13 @@
         </main>
         <footer>
           <Button level="main">OK</Button>
-          <Button @click="toggle">Cancel</Button>
+          <Button >Cancel</Button>
         </footer>
       </div>
     </div>
   </template>
 </template>
-
+</template>
 
 <script lang="ts">
 import Button from "./Button.vue";

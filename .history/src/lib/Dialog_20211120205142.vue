@@ -1,4 +1,4 @@
-<template>
+
   <template v-if="visible">
     <div class="gulu-dialog-overlay"></div>
     <div class="gulu-dialog-wrapper">
@@ -17,7 +17,7 @@
       </div>
     </div>
   </template>
-</template>
+
 
 
 <script lang="ts">
