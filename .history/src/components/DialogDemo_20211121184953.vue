@@ -24,6 +24,7 @@ export default {
     }
     const f2 = ()=>{
       console.log('cancel函数')
+      return true
     }
     return{
       x,toggle,f1,f2

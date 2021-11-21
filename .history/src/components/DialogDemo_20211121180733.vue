@@ -19,14 +19,12 @@ export default {
       x.value = !x.value
     }
     const f1 = ()=>{
-      console.log('ok函数')
-      return true
+      console.log('f1函数')
+      return false
     }
-    const f2 = ()=>{
-      console.log('cancel函数')
-    }
+    const f2 = ()
     return{
-      x,toggle,f1,f2
+      x,toggle
     }
   }
 };

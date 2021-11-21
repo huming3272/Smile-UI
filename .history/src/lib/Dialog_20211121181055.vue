@@ -11,8 +11,8 @@
           <p>第二行字</p>
         </main>
         <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
+          <Button level="main">OK</Button>
+          <Button @click="close">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -31,41 +31,23 @@ export default {
       type: Boolean,
       default: false,
     },
-    closeOnClickOverlay: {
-      type: Boolean,
-      default: false,
+    f1:{
+      type:Function,
+      default: true,
     },
-    ok: {
-      type: Function,
-    },
-    cancel: {
-      type: Function,
-    },
+    f2:{
+      type:Function,
+    }
   },
   setup(props, context) {
     const close = () => {
       context.emit("update:visible", !props.visible);
     };
-    //遮罩关闭
     const onClickOverlay = () => {
-      if (props.closeOnClickOverlay) {
-        close();
-      }
-    };
-    const ok = () => {
-      if (props.ok?.() !== false) {
-        // 链判断运算符 有ok时执行
-        close();
-      }
-    };
-    const cancel = () => {
-        context.emit('cancel')
-      };
+      if()
+    }
     return {
       close,
-      onClickOverlay,
-      ok,
-      cancel
     };
   },
 };

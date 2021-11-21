@@ -12,7 +12,7 @@
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
+          <Button @click="close">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -57,15 +57,16 @@ export default {
         // 链判断运算符 有ok时执行
         close();
       }
-    };
-    const cancel = () => {
-        context.emit('cancel')
+      const cancel = () => {
+        if (props.cancel?.() !== false) {
+          close();
+        }
       };
+    };
     return {
       close,
       onClickOverlay,
       ok,
-      cancel
     };
   },
 };

@@ -12,7 +12,7 @@
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
+          <Button @click="close">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -59,7 +59,9 @@ export default {
       }
     };
     const cancel = () => {
-        context.emit('cancel')
+        if (props.cancel?.() !== false) {
+          close();
+        }
       };
     return {
       close,

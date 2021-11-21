@@ -59,7 +59,9 @@ export default {
       }
     };
     const cancel = () => {
-        context.emit('cancel')
+        if (props.cancel?.() !== false) {
+          close();
+        }
       };
     return {
       close,

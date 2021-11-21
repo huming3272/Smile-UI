@@ -60,6 +60,7 @@ export default {
     };
     const cancel = () => {
         context.emit('cancel')
+          // close();
       };
     return {
       close,

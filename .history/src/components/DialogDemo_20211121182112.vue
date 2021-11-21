@@ -20,10 +20,11 @@ export default {
     }
     const f1 = ()=>{
       console.log('ok函数')
-      return true
+      return false
     }
     const f2 = ()=>{
       console.log('cancel函数')
+      return true
     }
     return{
       x,toggle,f1,f2

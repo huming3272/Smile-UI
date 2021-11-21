@@ -12,7 +12,7 @@
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
+          <Button @click="close">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -31,16 +31,16 @@ export default {
       type: Boolean,
       default: false,
     },
-    closeOnClickOverlay: {
-      type: Boolean,
+    closeOnClickOverlay:{
+      type:Boolean,
       default: false,
     },
-    ok: {
-      type: Function,
+    ok:{
+      type:Function,
     },
-    cancel: {
-      type: Function,
-    },
+    cancel:{
+      type:Function,
+    }
   },
   setup(props, context) {
     const close = () => {
@@ -48,24 +48,25 @@ export default {
     };
     //遮罩关闭
     const onClickOverlay = () => {
-      if (props.closeOnClickOverlay) {
-        close();
+      if(props.closeOnClickOverlay){
+        close()
       }
-    };
-    const ok = () => {
-      if (props.ok?.() !== false) {
-        // 链判断运算符 有ok时执行
-        close();
+    }
+    const ok = ()=>{
+      if(props.ok?.()!==false){
+        // 链判断运算符 有ok时执行 
+        close()
       }
-    };
-    const cancel = () => {
-        context.emit('cancel')
-      };
+    const cancel = ()=>{
+      if(props.cancel?.()!==false){
+        close()
+      }
+    }
+    }
     return {
       close,
       onClickOverlay,
-      ok,
-      cancel
+      ok
     };
   },
 };

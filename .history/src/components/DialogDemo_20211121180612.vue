@@ -1,7 +1,7 @@
 <template>
   <div>
     <Button @click="toggle">弹框显示</Button>
-    <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"></Dialog>
+    <Dialog v-model:visible="x"closeOnClickOverlay></Dialog>
   </div>
 </template>
 <script lang='ts'>
@@ -18,15 +18,8 @@ export default {
     const toggle = ()=>{
       x.value = !x.value
     }
-    const f1 = ()=>{
-      console.log('ok函数')
-      return true
-    }
-    const f2 = ()=>{
-      console.log('cancel函数')
-    }
     return{
-      x,toggle,f1,f2
+      x,toggle
     }
   }
 };
