@@ -4,14 +4,14 @@
     <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"
       @cancel="f2"
     >
-    <template v-slot:title>
-        <strong>加粗的标题</strong>
-      </template>
       <template v-slot:content>
         <strong>嗨，某个人</strong>
         <div>
           你好啊
         </div>
+      </template>
+      <template v-slot:>
+        <strong>加粗的标题</strong>
       </template>
     </Dialog>
   </div>

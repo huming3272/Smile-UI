@@ -7,8 +7,6 @@
           标题 <span class="gulu-dialog-close" @click="close"></span>
         </header>
         <main>
-          <slot name="title"></slot>
-          <hr>
           <slot name="content"></slot>
         </main>
         <footer>

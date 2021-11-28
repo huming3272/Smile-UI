@@ -8,8 +8,9 @@
         </header>
         <main>
           <slot name="title"></slot>
-          <hr>
           <slot name="content"></slot>
+          <hr>
+          
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>

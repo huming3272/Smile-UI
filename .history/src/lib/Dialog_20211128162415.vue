@@ -9,7 +9,7 @@
         <main>
           <slot name="title"></slot>
           <hr>
-          <slot name="content"></slot>
+          
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
