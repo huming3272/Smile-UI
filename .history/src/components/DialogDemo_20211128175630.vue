@@ -1,7 +1,7 @@
 <template>
   <div style="position: relative; z-index: 100">
     <Button @click="toggle">弹框显示</Button>
-    <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"
+    <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" 
       @cancel="f2"
     >
     <template v-slot:title>

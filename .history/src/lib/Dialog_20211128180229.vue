@@ -1,6 +1,6 @@
 <template>
   <template v-if="visible">
-    <Teleport to="body">
+    <Teleport to="html">
       <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
       <div class="gulu-dialog-wrapper">
         <div class="gulu-dialog">

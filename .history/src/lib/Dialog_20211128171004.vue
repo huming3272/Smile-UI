@@ -26,10 +26,6 @@
 <script lang="ts">
 import Button from "./Button.vue";
 export default {
-  name:"HelloWorld",
-  emits:['update:visible',
-    'cancel'
-  ],
   components: {
     Button,
   },

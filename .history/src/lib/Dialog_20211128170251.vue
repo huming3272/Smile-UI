@@ -1,24 +1,7 @@
 <template>
   <template v-if="visible">
-    <Teleport to="body">
-      <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="gulu-dialog-wrapper">
-        <div class="gulu-dialog">
-          <header>
-            标题 <span class="gulu-dialog-close" @click="close"></span>
-          </header>
-          <main>
-            <slot name="title"></slot>
-            <hr />
-            <slot name="content"></slot>
-          </main>
-          <footer>
-            <Button level="main" @click="ok">OK</Button>
-            <Button @click="cancel">Cancel</Button>
-          </footer>
-        </div>
-      </div>
-    </Teleport>
+    <Teleport to=''>
+
   </template>
 </template>
 
@@ -26,10 +9,6 @@
 <script lang="ts">
 import Button from "./Button.vue";
 export default {
-  name:"HelloWorld",
-  emits:['update:visible',
-    'cancel'
-  ],
   components: {
     Button,
   },
@@ -66,14 +45,14 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit("cancel");
-      close();
-    };
+        context.emit('cancel')
+        close();
+      };
     return {
       close,
       onClickOverlay,
       ok,
-      cancel,
+      cancel
     };
   },
 };

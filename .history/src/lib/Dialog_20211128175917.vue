@@ -1,6 +1,6 @@
 <template>
   <template v-if="visible">
-    <Teleport to="body">
+    <Teleport to="html">
       <div class="gulu-dialog-overlay" @click="onClickOverlay"></div>
       <div class="gulu-dialog-wrapper">
         <div class="gulu-dialog">
@@ -26,10 +26,6 @@
 <script lang="ts">
 import Button from "./Button.vue";
 export default {
-  name:"HelloWorld",
-  emits:['update:visible',
-    'cancel'
-  ],
   components: {
     Button,
   },
@@ -66,7 +62,7 @@ export default {
       }
     };
     const cancel = () => {
-      context.emit("cancel");
+      context.emit("cancel",1);
       close();
     };
     return {

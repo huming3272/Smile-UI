@@ -14,6 +14,9 @@
         </div>
       </template>
     </Dialog>
+    <div style="background: red;height: 200px;width:100%;position: absolute;z-index:1020">
+        大号遮罩
+    </div>
   </div>
 </template>
 <script lang='ts'>

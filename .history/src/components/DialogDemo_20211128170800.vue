@@ -1,5 +1,5 @@
 <template>
-  <div style="position: relative; z-index: 100">
+  <div>
     <Button @click="toggle">弹框显示</Button>
     <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2"
       @cancel="f2"
@@ -14,6 +14,9 @@
         </div>
       </template>
     </Dialog>
+    <div style="background: red;height: 200px;width:100%;position: absolute;">
+        大号遮罩
+    </div>
   </div>
 </template>
 <script lang='ts'>
