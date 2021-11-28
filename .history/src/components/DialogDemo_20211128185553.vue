@@ -47,13 +47,11 @@ export default {
         ok(){
           console.log('ok')
         },
-        cancel(){
-          console.log('cancel')
-        }
+        cancel()
       })
     }
     return{
-      x,toggle,f1,f2,showDialog
+      x,toggle,f1,f2
     }
   }
 };

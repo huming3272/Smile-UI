@@ -41,19 +41,10 @@ export default {
       console.log('cancel函数')
     }
     const showDialog = ()=>{
-      openDialog({
-        title: h('strong',{},'标题'),
-        content: '你好',
-        ok(){
-          console.log('ok')
-        },
-        cancel(){
-          console.log('cancel')
-        }
-      })
+      openDialog()
     }
     return{
-      x,toggle,f1,f2,showDialog
+      x,toggle,f1,f2
     }
   }
 };

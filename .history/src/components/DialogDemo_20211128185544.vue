@@ -45,15 +45,12 @@ export default {
         title: h('strong',{},'标题'),
         content: '你好',
         ok(){
-          console.log('ok')
-        },
-        cancel(){
-          console.log('cancel')
+          console
         }
       })
     }
     return{
-      x,toggle,f1,f2,showDialog
+      x,toggle,f1,f2
     }
   }
 };

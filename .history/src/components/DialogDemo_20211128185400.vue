@@ -22,7 +22,7 @@
 import Dialog from "../lib/Dialog.vue";
 import Button from "../lib/Button.vue";
 import {ref,h} from 'vue'
-import { openDialog }from "../lib/openDialog"
+import { openDialog }from ""
 export default {
   components: {
     Dialog,
@@ -40,20 +40,8 @@ export default {
     const f2 = ()=>{
       console.log('cancel函数')
     }
-    const showDialog = ()=>{
-      openDialog({
-        title: h('strong',{},'标题'),
-        content: '你好',
-        ok(){
-          console.log('ok')
-        },
-        cancel(){
-          console.log('cancel')
-        }
-      })
-    }
     return{
-      x,toggle,f1,f2,showDialog
+      x,toggle,f1,f2
     }
   }
 };

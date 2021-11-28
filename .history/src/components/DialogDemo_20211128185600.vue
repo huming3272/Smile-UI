@@ -53,7 +53,7 @@ export default {
       })
     }
     return{
-      x,toggle,f1,f2,showDialog
+      x,toggle,f1,f2
     }
   }
 };
