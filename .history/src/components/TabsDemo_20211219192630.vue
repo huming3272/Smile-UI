@@ -1,12 +1,15 @@
 <template>
   <div>
     <ul>
-      <li>
-        <Tab></Tab>
-      </li>
-      <li>
-        <Tabs></Tabs>
-      </li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
+      <li>Tabs组件</li>
     </ul>
   </div>
 </template>
@@ -20,7 +23,7 @@
       }
     },
     components:{
-      Tab,Tabs
+      Tab
     }
   }
 </script>
