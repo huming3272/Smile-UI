@@ -1,5 +1,5 @@
 <template>
     <div>
-        Tab组件11
+        Tabs组件22
     </div>
 </template>

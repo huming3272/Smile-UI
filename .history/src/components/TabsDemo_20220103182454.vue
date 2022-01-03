@@ -3,8 +3,8 @@
     <ul>
       <li>
         <Tabs>
-          <div title="tab1">导航1</div>
-          <Tab title="tab2">导航2</Tab>
+          <Tab></Tab>
+          <div></div>
         </Tabs>
       </li>
     </ul>

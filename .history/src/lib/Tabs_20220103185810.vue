@@ -1,12 +1,11 @@
 <template>
-    <component :is="defaults[0]"></component>
-    <component :is="defaults[1]"></component>
+    <component :is=""></component>
 </template>
 <script lang="ts">
 import Tab from './Tab.vue'
     export default {
         setup(props, context){
-            // context.slots.default是个函数，运行后返回一个包含插槽中组件的数组
+            // context.slots.default是个函数，运行后返回一个数组
             let defaults = context.slots.default()
             // defaults.type是插槽中组件的类型
             defaults.forEach((tag) => {
@@ -19,5 +18,8 @@ import Tab from './Tab.vue'
                 defaults
             }
         },
+        components:{
+            Tab
+        }
     }
 </script>

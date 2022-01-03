@@ -11,9 +11,9 @@ import Tab from './Tab.vue'
             // defaults.type是插槽中组件的类型
             defaults.forEach((tag) => {
                 //  判断类型是否和引入的Tab组件一致
-                if(tag.type !== Tab){
-                    throw new Error('Tabs子组件必须为Tab')
-                }
+                // if(tag.type !== Tab){
+                //     throw new Error('Tabs子组件必须为Tab')
+                // }
             })
             return {
                 defaults

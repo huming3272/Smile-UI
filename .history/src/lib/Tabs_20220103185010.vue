@@ -1,23 +1,27 @@
 <template>
-    <component :is="defaults[0]"></component>
-    <component :is="defaults[1]"></component>
+    <div>
+        tabs组件
+    </div>
 </template>
 <script lang="ts">
 import Tab from './Tab.vue'
     export default {
         setup(props, context){
-            // context.slots.default是个函数，运行后返回一个包含插槽中组件的数组
             let defaults = context.slots.default()
-            // defaults.type是插槽中组件的类型
             defaults.forEach((tag) => {
-                //  判断类型是否和引入的Tab组件一致
+                console.log(tag.type === )
                 if(tag.type !== Tab){
                     throw new Error('Tabs子组件必须为Tab')
                 }
             })
+            console.log(defaults[0],'1')
+            console.log(defaults[1],'2')
             return {
                 defaults
             }
         },
+        components:{
+            Tab
+        }
     }
 </script>

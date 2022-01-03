@@ -3,7 +3,7 @@
     <ul>
       <li>
         <Tabs>
-          <div title="tab1">导航1</div>
+          <div title="tab1">导航1</Tab>
           <Tab title="tab2">导航2</Tab>
         </Tabs>
       </li>

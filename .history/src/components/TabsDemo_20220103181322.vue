@@ -2,10 +2,10 @@
   <div>
     <ul>
       <li>
-        <Tabs>
-          <div title="tab1">导航1</div>
-          <Tab title="tab2">导航2</Tab>
-        </Tabs>
+        
+      </li>
+      <li>
+        <Tabs></Tabs>
       </li>
     </ul>
   </div>
