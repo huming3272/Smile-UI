@@ -3,7 +3,7 @@
     <ul>
       <li>
         <Tabs>
-          <Tab title="tab1">导航1</Tab>
+          <div title="tab1">导航1</div>
           <Tab title="tab2">导航2</Tab>
         </Tabs>
       </li>
@@ -16,7 +16,7 @@
   export default{
     data(){
       return {
-        
+          
       }
     },
     components:{

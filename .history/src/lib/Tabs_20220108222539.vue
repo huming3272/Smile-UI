@@ -20,6 +20,7 @@ import Tab from './Tab.vue'
             const titles = defaults.map((tag) => {
                 return tag.props.title
             })
+            console.log(titles, '标题')
             return {
                 defaults,
                 titles

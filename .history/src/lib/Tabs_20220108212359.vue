@@ -1,8 +1,6 @@
 <template>
-    <div v-for="t in titles" :key='t'>{{t}}</div>
-    <!-- 传入组件的title属性 -->
+    <div v-for="(t,i) in titles :"></div>
     <component v-for="(tab,index) in defaults" :is="tab" :key="index"></component>
-    <!-- 通过slot中插入的组件循环渲染 -->
 </template>
 <script lang="ts">
 import Tab from './Tab.vue'
@@ -20,9 +18,9 @@ import Tab from './Tab.vue'
             const titles = defaults.map((tag) => {
                 return tag.props.title
             })
+            console.log(titles, '标题')
             return {
-                defaults,
-                titles
+                defaults
             }
         },
     }
