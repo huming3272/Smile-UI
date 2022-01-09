@@ -20,7 +20,6 @@
     },
     setup(){
       const x = ref('导航1')
-      return {x}
     }
   }
 </script>

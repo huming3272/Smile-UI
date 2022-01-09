@@ -18,7 +18,7 @@
         v-for="(content, index) in defaults"
         :is="content"
         :key="index"
-        :class="{selected: content.props.title === selected}"
+        :class="{selected: content.props.title === selected}}"
       ></component>
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
@@ -46,23 +46,17 @@ import { computed }from 'vue'
             const titles = defaults.map((tag) => {
                 return tag.props.title
             })
-            const current = computed(() => {
-                console.log('重新 return')
-                    return defaults.filter((tag) => {
-                        return tag.props.title === props.selected
-                })[0]
-            })
-            const select = (title: string) => {
-                context.emit('update:selected', title)
-            }
             return {
                 defaults,
-                titles,
-                current,
-                select
+                titles
             }
         },
-        
+        const current = computed(() => {
+            console.log('重新 return')
+            return defaults.filter((tag) => {
+        return tag.props.title === props.selected
+      })[0]
+    })
     }
 </script>
 <style lang="scss" scoped>

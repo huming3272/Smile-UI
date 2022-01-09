@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li>
-        <Tabs v-model:selected="x">
+        <Tabs v-model:>
           <Tab title="tab1">导航1</Tab>
           <Tab title="tab2">导航2</Tab>
         </Tabs>
@@ -13,14 +13,14 @@
 <script lang="ts">
   import Tab from '../lib/Tab.vue'
   import Tabs from '../lib/Tabs.vue'
-  import { ref } from 'vue'
   export default{
+    data(){
+      return {
+        
+      }
+    },
     components:{
       Tab,Tabs
-    },
-    setup(){
-      const x = ref('导航1')
-      return {x}
     }
   }
 </script>

@@ -18,7 +18,7 @@
         v-for="(content, index) in defaults"
         :is="content"
         :key="index"
-        :class="{selected: content.props.title === selected}"
+        :class="{selected: content.props.title === selected}}"
       ></component>
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
