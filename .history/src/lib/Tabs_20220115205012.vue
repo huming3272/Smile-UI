@@ -66,7 +66,7 @@ import { computed }from 'vue'
         
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
@@ -91,11 +91,8 @@ $border-color: #d9d9d9;
   &-content {
     padding: 8px 0;
 
-    &-item {
-      display: none;
-      &.selected {
-        display: block;
-      }
+    &-item{
+      border:1px solid red;
     }
   }
 }

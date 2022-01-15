@@ -22,6 +22,9 @@
       ></component>
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
+    <p>
+      {{current}}
+    </p>
   </div>
 </template>
 <script lang="ts">
@@ -66,7 +69,7 @@ import { computed }from 'vue'
         
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
@@ -85,18 +88,12 @@ $border-color: #d9d9d9;
       }
       &.selected {
         color: $blue;
+        display: block;
       }
     }
   }
   &-content {
     padding: 8px 0;
-
-    &-item {
-      display: none;
-      &.selected {
-        display: block;
-      }
-    }
   }
 }
 </style>
