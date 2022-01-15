@@ -89,14 +89,7 @@ $border-color: #d9d9d9;
         color: $blue;
       }
     }
-    &-indicator {
-      position: absolute;
-      height: 3px;
-      background: $blue;
-      left: 0;
-      bottom: -1px;
-      width: 100px;
-    }
+    &0indicator
   }
   &-content {
     padding: 8px 0;
