@@ -28,7 +28,7 @@
       ></component>
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
-    
+    <p ref="ppp" @click="printf">里面有一些测试用的文字</p>
   </div>
 </template>
 <script lang="ts">
@@ -46,11 +46,8 @@ import { computed,
         },
         setup(props, context){
             const navItems = ref < HTMLDivElement[] >([])
-            // 用于获取输入的tab组件
             const indicator = ref < HTMLDivElement >(null)
-            // 滑竿
             const container = ref < HTMLDivElement >(null)
-            // 容器
             const ppp =  ref < HTMLDivElement >(null)
             const x = () => {
               const divs = navItems.value
@@ -59,8 +56,10 @@ import { computed,
               indicator.value.style.width = width + 'px'
               const { left: left1 } = container.value.getBoundingClientRect() 
               const { left: left2 } = result.getBoundingClientRect()
+              
               const left = left2 - left1
               indicator.value.style.left = left + 'px'
+              console.log(indicator.value, '棒子值')
             }
             onMounted(x)
             onUpdated(x)
@@ -88,6 +87,9 @@ import { computed,
               console.log(title, 'title')
                 context.emit('update:selected', title)
             }
+            const printf = () => {
+              console.log(ppp.value)
+            }
             return {
                 defaults,
                 titles,
@@ -96,9 +98,7 @@ import { computed,
                 navItems,
                 indicator,
                 container,
-                // return出去的变量如果名字和模板中的ref名一致，
-                // 会被同名ref赋值，调用变量能得到dom树     
-                // 这个在vue3文档中被称为“模板引用”
+                printf
             }
         }
       }

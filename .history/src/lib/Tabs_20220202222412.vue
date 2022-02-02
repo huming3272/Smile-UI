@@ -96,9 +96,7 @@ import { computed,
                 navItems,
                 indicator,
                 container,
-                // return出去的变量如果名字和模板中的ref名一致，
-                // 会被同名ref赋值，调用变量能得到dom树     
-                // 这个在vue3文档中被称为“模板引用”
+                // return出去的变量如果名字和模板中的ref名一致，会被同名ref赋值，再次调用能得到dom树
             }
         }
       }

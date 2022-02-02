@@ -1,21 +1,16 @@
 <template>
   <div class="gulu-tabs">
-    <div class="gulu-tabs-nav" ref="container">
+    <div class="gulu-tabs-nav">
       <div
         class="gulu-tabs-nav-item"
         v-for="(t, index) in titles"
-        :ref="(el) => {
-          if (el) { 
-                navItems[index] = el 
-                } 
-        }"
         :key="index"
         @click="select(t)"
         :class="{ selected: t === selected }"
       >
         {{ t }}
       </div>
-      <div class="gulu-tabs-nav-indicator" ref = "indicator"></div>
+      <div class="gulu-tabs-nav-indicator"></div>
       <!-- 传入组件的title属性 -->
     </div>
     <div class="gulu-tabs-content">
@@ -28,16 +23,11 @@
       ></component>
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
-    
   </div>
 </template>
 <script lang="ts">
 import Tab from './Tab.vue'
-import { computed,
-         ref,
-         onMounted,
-         onUpdated
-        }from 'vue'
+import { computed }from 'vue'
     export default {
         props:{
             selected: {
@@ -45,32 +35,12 @@ import { computed,
             }
         },
         setup(props, context){
-            const navItems = ref < HTMLDivElement[] >([])
-            // 用于获取输入的tab组件
-            const indicator = ref < HTMLDivElement >(null)
-            // 滑竿
-            const container = ref < HTMLDivElement >(null)
-            // 容器
-            const ppp =  ref < HTMLDivElement >(null)
-            const x = () => {
-              const divs = navItems.value
-              const result = divs.filter((div) => {return div.classList.contains('selected')})[0]
-              const { width } = result.getBoundingClientRect()
-              indicator.value.style.width = width + 'px'
-              const { left: left1 } = container.value.getBoundingClientRect() 
-              const { left: left2 } = result.getBoundingClientRect()
-              const left = left2 - left1
-              indicator.value.style.left = left + 'px'
-            }
-            onMounted(x)
-            onUpdated(x)
-
             // context.slots.default是个函数，运行后返回一个包含插槽中组件的数组
             let defaults = context.slots.default()
             // defaults.type是插槽中组件的类型
             defaults.forEach((tag) => {
                 //  判断类型是否和引入的Tab组件一致
-                console.log(tag.type, 'tag')
+                console.log(tag.type, 'tag类型')
                 if(tag.type !== Tab){
                     throw new Error('Tabs子组件必须为Tab')
                 }
@@ -92,16 +62,11 @@ import { computed,
                 defaults,
                 titles,
                 current,
-                select,
-                navItems,
-                indicator,
-                container,
-                // return出去的变量如果名字和模板中的ref名一致，
-                // 会被同名ref赋值，调用变量能得到dom树     
-                // 这个在vue3文档中被称为“模板引用”
+                select
             }
-        }
-      }
+        },
+        
+    }
 </script>
 <style lang="scss">
 $blue: #40a9ff;
@@ -132,7 +97,6 @@ $border-color: #d9d9d9;
       left: 0;
       bottom: -1px;
       width: 100px;
-      transition: all 250ms;
     }
   }
   &-content {
