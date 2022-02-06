@@ -4,11 +4,8 @@
       <li>
         <Tabs v-model:selected="x">
           <Tab 
-            v-for="(item, index) in tabs" 
-            :key="index" 
-            :title="item.title">
-            {{item.content}}
-          </Tab>
+          v-for="(item, index) in tabs" 
+          :key="index" :title="item.title">{{item.content}}</Tab>
         </Tabs>
       </li>
     </ul>

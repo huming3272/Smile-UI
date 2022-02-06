@@ -34,9 +34,11 @@
 <script lang="ts">
 import Tab from './Tab.vue'
 import { 
+        computed,
          ref,
          watchEffect,
          onMounted,
+         onUpdated
         }from 'vue'
     export default {
         props:{
@@ -72,6 +74,7 @@ import {
 
             defaults.forEach((tag) => {
                 //  判断类型是否和引入的Tab组件一致
+                console.log(tag.type, 'tag')
                 if(tag.type !== Tab){
                     throw new Error('Tabs子组件必须为Tab')
                 }
@@ -79,12 +82,23 @@ import {
             const titles = defaults.map((tag) => {
                 return tag.props.title
             })
+            // const current = computed(() => {
+            //     console.log('重新 return')
+            //         return defaults.filter((tag) => {
+            //             return tag.props.title === props.selected
+            //     })[0]
+            // })
+            const print = (arg) => {
+              console.log(arg)
+            }
             const select = (title: string) => {
+              console.log(title, 'title')
                 context.emit('update:selected', title)
             }
             return {
                 defaults,
                 titles,
+                // current,
                 select,
                 selectedItem,
                 indicator,

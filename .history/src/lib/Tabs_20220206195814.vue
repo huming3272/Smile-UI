@@ -80,11 +80,13 @@ import {
                 return tag.props.title
             })
             const select = (title: string) => {
+              console.log(title, 'title')
                 context.emit('update:selected', title)
             }
             return {
                 defaults,
                 titles,
+                // current,
                 select,
                 selectedItem,
                 indicator,

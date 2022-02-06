@@ -3,12 +3,9 @@
     <ul>
       <li>
         <Tabs v-model:selected="x">
-          <Tab 
-            v-for="(item, index) in tabs" 
-            :key="index" 
-            :title="item.title">
-            {{item.content}}
-          </Tab>
+          <Tab title="tab1">导航1</Tab>
+          <Tab title="tab2">导航2</Tab>
+          <Tab title="tab3">导航3</Tab>
         </Tabs>
       </li>
     </ul>
@@ -28,8 +25,8 @@
         {title:'tab2',content:'导航2'},
         {title:'tab3',content:'导航3'}
       ]
-      const x = ref(tabs[0].title)
-      return {tabs, x}
+      const x = ref()
+      return {x}
     }
   }
 </script>

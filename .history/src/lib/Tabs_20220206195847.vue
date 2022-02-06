@@ -85,6 +85,7 @@ import {
             return {
                 defaults,
                 titles,
+                // current,
                 select,
                 selectedItem,
                 indicator,

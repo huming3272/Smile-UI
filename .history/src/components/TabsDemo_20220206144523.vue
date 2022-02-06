@@ -3,12 +3,7 @@
     <ul>
       <li>
         <Tabs v-model:selected="x">
-          <Tab 
-            v-for="(item, index) in tabs" 
-            :key="index" 
-            :title="item.title">
-            {{item.content}}
-          </Tab>
+          <Tab v-for="(item, index) in tabs" :title=>导航1</Tab>
         </Tabs>
       </li>
     </ul>

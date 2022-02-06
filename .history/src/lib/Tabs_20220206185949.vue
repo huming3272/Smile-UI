@@ -34,9 +34,11 @@
 <script lang="ts">
 import Tab from './Tab.vue'
 import { 
+        computed,
          ref,
          watchEffect,
          onMounted,
+         onUpdated
         }from 'vue'
     export default {
         props:{
@@ -51,27 +53,32 @@ import {
             // 滑竿
             const container = ref < HTMLDivElement >(null)
             // 容器
+            const x = () => {
+              const { width } = selectedItem.value.getBoundingClientRect()
+              console.log(width ,'宽度')
+              indicator.value.style.width = width + 'px'
+              const { left: left1 } = container.value.getBoundingClientRect() 
+              const { left: left2 } = selectedItem.value.getBoundingClientRect()
+              const left = left2 - left1
+              indicator.value.style.left = left + 'px'
+            }
             onMounted(() => {
-              // mount生命周期
-              watchEffect(() => {
-                // 类似watch监听器
-                // 监听的数据有dom，所以放在mount生命周期里
-               const { width } = selectedItem.value.getBoundingClientRect()
-                indicator.value.style.width = width + 'px'
-                const { left: left1 } = container.value.getBoundingClientRect() 
-                const { left: left2 } = selectedItem.value.getBoundingClientRect()
-                const left = left2 - left1
-                indicator.value.style.left = left + 'px'
-              })  
+              console.log('mount')
+              x()
             })
+            // onUpdated(x)
 
-            
+            watchEffect(() => {
+              console.log('watch')
+              x()
+            })
             // context.slots.default是个函数，运行后返回一个包含插槽中组件的数组
             let defaults = context.slots.default()[0].children
             // defaults.type是插槽中组件的类型
 
             defaults.forEach((tag) => {
                 //  判断类型是否和引入的Tab组件一致
+                console.log(tag.type, 'tag')
                 if(tag.type !== Tab){
                     throw new Error('Tabs子组件必须为Tab')
                 }
@@ -79,12 +86,23 @@ import {
             const titles = defaults.map((tag) => {
                 return tag.props.title
             })
+            // const current = computed(() => {
+            //     console.log('重新 return')
+            //         return defaults.filter((tag) => {
+            //             return tag.props.title === props.selected
+            //     })[0]
+            // })
+            const print = (arg) => {
+              console.log(arg)
+            }
             const select = (title: string) => {
+              console.log(title, 'title')
                 context.emit('update:selected', title)
             }
             return {
                 defaults,
                 titles,
+                // current,
                 select,
                 selectedItem,
                 indicator,
