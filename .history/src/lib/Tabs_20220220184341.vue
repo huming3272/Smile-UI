@@ -80,6 +80,7 @@ import {
             })
             const current = computed(() => {
                 return defaults.find((tag) => {
+                  console.log(tag)
                   return tag.props.title === props.selected
                   })
             })

@@ -80,8 +80,7 @@ import {
             })
             const current = computed(() => {
                 return defaults.find((tag) => {
-                  return tag.props.title === props.selected
-                  })
+                  return tag.props.title === props.selected})
             })
 
             const titles = defaults.map((tag) => {

@@ -26,7 +26,7 @@
         :key="index"
         :class="{selected: content.props.title === selected}"
       ></component> -->
-      <component class="gulu-tabs-content-item" :is="current" :key="current.props.title"/>
+      <component :is
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
     
@@ -79,9 +79,7 @@ import {
                 }
             })
             const current = computed(() => {
-                return defaults.find((tag) => {
-                  return tag.props.title === props.selected
-                  })
+                return defaults.find((tag) => {tag.props.title === props.selected})
             })
 
             const titles = defaults.map((tag) => {
@@ -139,6 +137,13 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
+
+    &-item {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>

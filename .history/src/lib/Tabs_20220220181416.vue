@@ -19,14 +19,13 @@
       <!-- 传入组件的title属性 -->
     </div>
     <div class="gulu-tabs-content">
-      <!-- <component
+      <component
         class="gulu-tabs-content-item"
         v-for="(content, index) in defaults"
         :is="content"
         :key="index"
         :class="{selected: content.props.title === selected}"
-      ></component> -->
-      <component class="gulu-tabs-content-item" :is="current" :key="current.props.title"/>
+      ></component>
       <!-- 通过slot中插入的组件循环渲染 -->
     </div>
     
@@ -79,9 +78,7 @@ import {
                 }
             })
             const current = computed(() => {
-                return defaults.find((tag) => {
-                  return tag.props.title === props.selected
-                  })
+
             })
 
             const titles = defaults.map((tag) => {
@@ -91,7 +88,6 @@ import {
                 context.emit('update:selected', title)
             }
             return {
-                current,
                 defaults,
                 titles,
                 select,
@@ -139,6 +135,13 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
+
+    &-item {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>
