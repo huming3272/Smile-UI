@@ -50,7 +50,8 @@ export default {
           }
       }
     onMounted(() => {
-      window.addEventListener('resize',menuActive)
+      window.addEventListener('resize',
+      menuActive)
     })
     onUnmounted(() => {
       window.removeEventListener('resive',menuActive)

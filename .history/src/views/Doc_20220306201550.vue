@@ -31,7 +31,7 @@
 </template>
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
-import {inject,Ref,onMounted,onUnmounted} from 'vue'
+import {inject,Ref,onMounted,unmounted} from 'vue'
 import  router  from '../router/index';
 export default {
   components: {
@@ -50,10 +50,11 @@ export default {
           }
       }
     onMounted(() => {
-      window.addEventListener('resize',menuActive)
+      window.addEventListener('resize',
+      menuActive)
     })
-    onUnmounted(() => {
-      window.removeEventListener('resive',menuActive)
+    unmounted(() => {
+      window.removeEventListener('resive')
     })
     
     router.afterEach((to, from) => {

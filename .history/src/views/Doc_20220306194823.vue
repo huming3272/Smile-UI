@@ -31,7 +31,7 @@
 </template>
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
-import {inject,Ref,onMounted,onUnmounted} from 'vue'
+import {inject,Ref,onMounted} from 'vue'
 import  router  from '../router/index';
 export default {
   components: {
@@ -44,18 +44,15 @@ export default {
     toggleAside.value = true
     //引入名为menuVisible
     
-    const menuActive = () => {
-          if (window.innerWidth > 500){
-            menuVisible.value = true
-          }
-      }
     onMounted(() => {
-      window.addEventListener('resize',menuActive)
+      console.log()
+      document.body.addEventListener('resize',() => {
+          if (window.innerWidth > 500){
+            toggleAside.value = true
+          }
+          console.log('启动')
+      })
     })
-    onUnmounted(() => {
-      window.removeEventListener('resive',menuActive)
-    })
-    
     router.afterEach((to, from) => {
 
       // menuVisible.value = false
