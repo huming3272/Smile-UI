@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
       <h1>轱辘UI</h1>
       <h2>一个厉害的 UI 框架</h2>
       <p class="actions">
-        <a>GitHub</a>
-        <a>开始</a>
+        <a href="https://github.com">GitHub</a>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
@@ -20,6 +20,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.topnavAndBanner{
+  
+}
 .banner {
   padding: 100px 0;
   display: flex;
