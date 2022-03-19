@@ -48,9 +48,9 @@ $h2: $h - 4px;
   }
   &.gulu-checked {
     background: #2d8cf0;
-    > span {
-      left: calc(100% - #{$h2} - 2px);
-    }
+  }
+  &.checked > span {
+    left: calc(100% - #{$h2} - 2px);
   }
   &.gulu-checked:active {
     > span {

@@ -9,7 +9,7 @@
     </div>
     <ul class="menu">
       <li>
-        <router-link to="/doc">
+        <router-link to="">
           文档
         </router-link>
       </li>

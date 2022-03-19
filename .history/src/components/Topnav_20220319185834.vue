@@ -8,11 +8,7 @@
       </svg>
     </div>
     <ul class="menu">
-      <li>
-        <router-link to="/doc">
-          文档
-        </router-link>
-      </li>
+      
     </ul>
     <span class="toggleAside" v-if="toggleAside"  @click="toggleMenu">333</span>
   </div>
