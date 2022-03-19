@@ -8,18 +8,10 @@
         <a href="https://github.com">GitHub</a>
         <router-link to="/doc">开始</router-link>
       </p>
-    </div>
-    <div class="features">
-          <svg class="icon">
-              <use xlink:href="#icon-Smile"></use>
-            </svg>
-            <svg class="icon">
-              <use xlink:href="#icon-vue"></use>
-            </svg>
-            <svg class="icon">
-              <use xlink:href="#icon-ts"></use>
-            </svg>
+      <div class="iconWrapper">
+          
       </div>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -31,9 +23,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: #02bcb0;
-$border-radius: 4px;
-$color: #007974;
 .topnavAndBanner{
   background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
 }
@@ -47,23 +36,14 @@ $color: #007974;
     padding: 8px 0;
     a {
       margin:0 8px;
-      background: $green;
+      background: #fff;
       display: inline-block;
       $h: 28px;
+      height: $h;
+      line-height: $h;
       border-radius: $h/2;
-      padding: 8px 24px;
-      border-radius: $border-radius;
-    }
-    &:hover{
-      text-decoration: none;
+      padding: 0 8px;
     }
   }
 }
-.features {
-    >svg {
-      width: 64px;
-      height: 64px; 
-    }
-}
-
 </style> 

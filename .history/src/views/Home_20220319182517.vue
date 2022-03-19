@@ -49,7 +49,6 @@ $color: #007974;
       margin:0 8px;
       background: $green;
       display: inline-block;
-      $h: 28px;
       border-radius: $h/2;
       padding: 8px 24px;
       border-radius: $border-radius;

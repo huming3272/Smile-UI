@@ -2,10 +2,10 @@
   <div class="topnav">
     <!-- <router-link class="logo" to='/' > 
     </router-link> -->
-    <div class="logo">
+    <div>
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-smile"></use>
-      </svg>
+    </svg>
     </div>
     <ul class="menu">
       <li>菜单1</li>
@@ -43,10 +43,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$color: #007974;
 .topnav {
-  color: $color;
-  // background: pink;
+  background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -57,6 +55,7 @@ $color: #007974;
   justify-content: center;
   align-items: center;
   > .logo {
+    display:block;
     max-width: 6em;
     margin-right: auto;
     >svg {

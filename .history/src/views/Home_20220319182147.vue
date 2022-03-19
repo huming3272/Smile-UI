@@ -47,15 +47,13 @@ $color: #007974;
     padding: 8px 0;
     a {
       margin:0 8px;
-      background: $green;
+      background: #fff;
       display: inline-block;
       $h: 28px;
+      height: $h;
+      line-height: $h;
       border-radius: $h/2;
-      padding: 8px 24px;
-      border-radius: $border-radius;
-    }
-    &:hover{
-      text-decoration: none;
+      padding: 0 8px;
     }
   }
 }

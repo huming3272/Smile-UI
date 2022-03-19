@@ -50,12 +50,10 @@ $color: #007974;
       background: $green;
       display: inline-block;
       $h: 28px;
+      height: $h;
+      line-height: $h;
       border-radius: $h/2;
-      padding: 8px 24px;
-      border-radius: $border-radius;
-    }
-    &:hover{
-      text-decoration: none;
+      padding: 0 8px;
     }
   }
 }

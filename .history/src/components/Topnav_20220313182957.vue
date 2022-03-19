@@ -46,7 +46,7 @@ export default {
 $color: #007974;
 .topnav {
   color: $color;
-  // background: pink;
+  background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
