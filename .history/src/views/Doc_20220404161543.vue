@@ -12,16 +12,8 @@
               介绍
             </router-link>
           </li>
-          <li>
-            <router-link to="/doc/install">
-              安装
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/doc/get-started">
-              开始使用
-            </router-link>
-          </li>
+          <li></li>
+          <li></li>
         </ol>
         <h2>
           <router-link to='/doc'>

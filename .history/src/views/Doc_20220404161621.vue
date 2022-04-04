@@ -18,8 +18,8 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/doc/get-started">
-              开始使用
+            <router-link>
+              
             </router-link>
           </li>
         </ol>

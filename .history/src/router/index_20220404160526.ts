@@ -7,9 +7,7 @@ import Dialog from '../components/DialogDemo.vue'
 import Tabs from '../components/TabsDemo.vue'
 import DocDemo from '../components/DocDemo.vue'
 
-import Intro from './views/Intro.vue';
-import GetStarted from './views/GetStarted.vue'
-import Install from './views/Install.vue'
+
 
 const history = createWebHashHistory()
 // hash型路由
@@ -21,14 +19,11 @@ const history = createWebHashHistory()
         {path:'/',component:Home},
         {path:'/doc',component:Doc,
         children:[
-            { path:'',component:DocDemo },
-            { path:'switch',component:Switch },
-            { path:'button',component:Button },
-            { path:'Dialog',component:Dialog },
-            { path:'Tabs',component:Tabs },
-            { path: "intro", component: Intro },
-            { path: "get-started", component: GetStarted },
-            { path: "install", component: Install },
+            {path:'',component:DocDemo},
+            {path:'switch',component:Switch},
+            {path:'button',component:Button},
+            {path:'Dialog',component:Dialog},
+            {path:'Tabs',component:Tabs},
         ]},
 
     ]

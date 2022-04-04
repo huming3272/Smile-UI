@@ -25,7 +25,7 @@ const history = createWebHashHistory()
             { path:'switch',component:Switch },
             { path:'button',component:Button },
             { path:'Dialog',component:Dialog },
-            { path:'Tabs',component:Tabs },
+            { path:'Tabs',component:Tabs},
             { path: "intro", component: Intro },
             { path: "get-started", component: GetStarted },
             { path: "install", component: Install },
