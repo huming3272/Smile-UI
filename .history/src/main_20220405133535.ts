@@ -3,8 +3,8 @@ import "./lib/svg.js";
 import "./index.scss";
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router/index';
-import 'github-markdown-css'
+import router from './routr/index';
+import github-markdown-css' from 'github-markdown-css';
 
 const app = createApp(App)
 app.use(router)

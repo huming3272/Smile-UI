@@ -154,7 +154,7 @@ aside {
     > li {
       >a {
         display: block;
-        padding: 4px 16px;
+        padding: 4px px;
         text-decoration: none;
       }
       .router-link-active{

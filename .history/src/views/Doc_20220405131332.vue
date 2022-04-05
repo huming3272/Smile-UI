@@ -132,14 +132,14 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px 10px;
-    // background: lightgreen;
+    background: lightgreen;
     
   }
 }
 aside {
   background: lightblue;
   width: 200px;
-  // padding: 16px 0 16px 16px;
+  padding: 16px 0 16px 16px;
   position: fixed;
   top: 0;
   left: 0;
@@ -154,7 +154,7 @@ aside {
     > li {
       >a {
         display: block;
-        padding: 4px 16px;
+        padding: 4px px;
         text-decoration: none;
       }
       .router-link-active{

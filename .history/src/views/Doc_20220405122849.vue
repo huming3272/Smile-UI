@@ -106,7 +106,7 @@ export default {
   > .content {
     flex-grow: 1;
     padding-top: 53px;
-    padding-left: 200px;
+    padding-left: 150px;
     @media (max-width: 500px) {
       padding-left: 0; 
     }
@@ -124,42 +124,32 @@ export default {
     }
     >ol{
       .router-link-active{
-        // background: rgba(255, 81, 0, 0.5)
+        background: rgba(255, 81, 0, 0.5)
       }
     }
       
   }
   > main {
     flex-grow: 1;
-    padding: 16px 10px;
-    // background: lightgreen;
-    
+    padding: 16px 0;
+    background: lightgreen;
   }
 }
 aside {
   background: lightblue;
-  width: 200px;
-  // padding: 16px 0 16px 16px;
+  width: 150px;
+  padding: 16px;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
-  // z-index: 20;
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
   }
   > ol {
     > li {
-      >a {
-        display: block;
-        padding: 4px 16px;
-        text-decoration: none;
-      }
-      .router-link-active{
-        background: white;
-      }
     }
   }
   @media (max-width: 500px) {
