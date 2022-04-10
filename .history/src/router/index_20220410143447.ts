@@ -12,9 +12,9 @@ import GetStarted from '../views/GetStarted.vue'
 import Install from '../views/Install.vue'
 
 import { h } from 'vue';
-import Markdown from '../components/Markdown.vue';
-const md = (filename) => {return h(Markdown,{path:`../markdown/${filename}.md`, key: filename})}
-//  必须加上不同的key，不然切换组件后，渲染会失败
+import Markdown from './components/Markdown.vue';
+const md = filename => h(markdown,{path:`../markdown/${filename}`})
+
 const history = createWebHashHistory()
 // hash型路由
  const router = createRouter(
@@ -30,9 +30,9 @@ const history = createWebHashHistory()
             { path:'button',component:Button },
             { path:'Dialog',component:Dialog },
             { path:'Tabs',component:Tabs },
-            { path: "intro", component: md('intro') },
-            { path: "get-started", component: md('get-started') },
-            { path: "install", component: md('install') },
+            { path: "intro", component: Intro },
+            { path: "get-started", component: GetStarted },
+            { path: "install", component: Install },
         ]},
 
     ]
