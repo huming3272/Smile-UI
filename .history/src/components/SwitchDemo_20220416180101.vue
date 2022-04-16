@@ -11,7 +11,7 @@
           <Button>查看代码</Button>
         </div>
         <div class="demo-code">
-          <pre v-text="Switch1Demo.__sourceCode"></pre>
+          <pre>{{Switch1Demo.__sourceCode}}</pre>
         </div>
       </div>
       <div class="demo">
@@ -69,7 +69,7 @@ export default {
     const edit = () => {
       that.$forceUpdate();
     };
-      console.dir(Switch2Demo)
+      console.log(Switch2Demo.__sourceCode)
     
     return {
       bool,

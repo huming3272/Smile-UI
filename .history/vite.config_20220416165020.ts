@@ -6,7 +6,6 @@ import {baseParse} from '@vue/compiler-core'
 
 export default {
   plugins: [md()],
-  // 使用了vue-loader的自定义块，
   vueCustomBlockTransforms: {
     demo: (options) => {
       const { code, path } = options

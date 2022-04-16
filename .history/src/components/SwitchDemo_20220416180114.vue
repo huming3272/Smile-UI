@@ -69,7 +69,7 @@ export default {
     const edit = () => {
       that.$forceUpdate();
     };
-      console.dir(Switch2Demo)
+      console.log(Switch2Demo.__sourceCode)
     
     return {
       bool,
