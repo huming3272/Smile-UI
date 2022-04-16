@@ -43,15 +43,11 @@
 <script lang="ts">
 import { inject, Ref, ref, watch, getCurrentInstance } from "vue";
 import Switch from "../lib/Switch.vue";
-import Switch1Demo from './Switch1.demo.vue'
-import Switch2Demo from './Switch2.demo.vue'
 import Button from "../lib/Button.vue";
 export default {
   name: "SwitchDemo",
   components: {
     Switch,
-    Switch1Demo,
-    Switch2Demo,
     Button,
   },
   data() {

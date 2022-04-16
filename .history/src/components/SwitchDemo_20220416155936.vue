@@ -50,8 +50,8 @@ export default {
   name: "SwitchDemo",
   components: {
     Switch,
-    Switch1Demo,
-    Switch2Demo,
+    Switch1Demo
+Switch2Demo
     Button,
   },
   data() {

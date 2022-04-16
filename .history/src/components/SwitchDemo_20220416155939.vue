@@ -51,7 +51,7 @@ export default {
   components: {
     Switch,
     Switch1Demo,
-    Switch2Demo,
+Switch2Demo
     Button,
   },
   data() {
