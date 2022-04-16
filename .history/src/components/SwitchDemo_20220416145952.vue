@@ -17,13 +17,13 @@
       <div class="demo">
         <h2>支持 disabled</h2>
         <div class="demo-component">
-          <Switch v-model:value="bool" :disabled="true" />
+          <Switch v-model:value="bool" :disabled />
         </div>
         <div class="demo-actions">
           <Button>查看代码</Button>
         </div>
         <div class="demo-code">
-          <pre>&lt;Switch v-model:value="bool"  :disabled="true" /&gt;</pre>
+          <pre>&lt;Switch v-model:value="bool" disabled /&gt;</pre>
         </div>
       </div>
     </div>

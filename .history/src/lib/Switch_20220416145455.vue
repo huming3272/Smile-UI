@@ -2,7 +2,7 @@
   <button
     class="gulu-switch"
     @click="toggle"
-    :class="{ 'gulu-checked': value,'gulu-disabled': disabled }"
+    :class="{ 'gulu-checked': value,'' }"
   >
     <span></span>
   </button>
@@ -13,11 +13,10 @@ export default {
   name: "Switch",
   props: {
     value: Boolean,
-    disabled: Boolean,
   },
   setup(props, context) {
     const toggle = () => {
-      props.disabled || context.emit("update:value", !props.value);
+      context.emit("update:value", !props.value);
     };
     return { toggle };
   },
@@ -46,9 +45,6 @@ $h2: $h - 4px;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 1);
     transition: left 250ms;
     border-radius: $h2 / 2;
-  }
-  &.gulu-disabled{
-    cursor: not-allowed;
   }
   &.gulu-checked {
     background: #2d8cf0;

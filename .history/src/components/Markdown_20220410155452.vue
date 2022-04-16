@@ -15,6 +15,7 @@ export default {
   },
   setup(props) {
     const content = ref < string > (null)
+    
     import(props.path).then(result => {
       content.value = result.default
     //  异步用变量名当文件名加载文件

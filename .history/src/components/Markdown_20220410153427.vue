@@ -13,12 +13,14 @@ export default {
       required: true
     }
   },
-  setup(props) {
-    const content = ref < string > (null)
-    import(props.path).then(result => {
-      content.value = result.default
-    //  异步用变量名当文件名加载文件
-    })
+  async setup(props) {
+    let content = ref < string > (null)
+    
+    content = 
+    // import(props.path).then(result => {
+    //   content.value = result.default
+    // //  异步用变量名当文件名加载文件
+    // })
     return {
       content
     }

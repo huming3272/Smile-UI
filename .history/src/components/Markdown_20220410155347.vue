@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import {
-  ref
+  ref, onBeforeCreate
 } from 'vue'
 export default {
   props: {
@@ -13,11 +13,13 @@ export default {
       required: true
     }
   },
-  setup(props) {
+  async setup(props) {
     const content = ref < string > (null)
+    content.value = await 
     import(props.path).then(result => {
       content.value = result.default
     //  异步用变量名当文件名加载文件
+
     })
     return {
       content

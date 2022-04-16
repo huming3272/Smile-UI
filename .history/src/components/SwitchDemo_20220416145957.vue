@@ -23,7 +23,7 @@
           <Button>查看代码</Button>
         </div>
         <div class="demo-code">
-          <pre>&lt;Switch v-model:value="bool"  :disabled="true" /&gt;</pre>
+          <pre>&lt;Switch v-model:value="bool" disabled /&gt;</pre>
         </div>
       </div>
     </div>

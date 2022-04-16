@@ -17,7 +17,7 @@
       <div class="demo">
         <h2>支持 disabled</h2>
         <div class="demo-component">
-          <Switch v-model:value="bool" :disabled="true" />
+          <Switch v-model:value="bool"  />
         </div>
         <div class="demo-actions">
           <Button>查看代码</Button>

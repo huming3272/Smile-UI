@@ -17,7 +17,7 @@ export default {
   },
   setup(props, context) {
     const toggle = () => {
-      props.disabled || context.emit("update:value", !props.value);
+      context.emit("update:value", !props.value);
     };
     return { toggle };
   },
@@ -48,7 +48,7 @@ $h2: $h - 4px;
     border-radius: $h2 / 2;
   }
   &.gulu-disabled{
-    cursor: not-allowed;
+    pointer: n
   }
   &.gulu-checked {
     background: #2d8cf0;
