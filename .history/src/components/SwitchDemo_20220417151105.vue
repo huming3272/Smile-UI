@@ -27,7 +27,7 @@ export default {
   components: {
     Switch,
     Button,
-    Demo
+    
   },
   data() {
     return {};
