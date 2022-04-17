@@ -24,8 +24,7 @@
           <Button>查看代码</Button>
         </div>
         <div class="demo-code">
-          <pre class="language-html"
-          v-html="Prism.highlight(Switch2Demo.__sourceCode, Prism.languages.html, 'html')" />
+          <pre v-text="Switch2Demo.__sourceCode"></pre>
         </div>
       </div>
     </div>
@@ -49,6 +48,7 @@ import Switch1Demo from './Switch1.demo.vue'
 import Switch2Demo from './Switch2.demo.vue'
 import Button from "../lib/Button.vue";
 import 'prismjs';
+import 'prismjs/themes/prism.css'
 const Prism = (window as any).Prism
 export default {
   name: "SwitchDemo",
@@ -110,8 +110,4 @@ $border-color: #d9d9d9;
     }
   }
 }
-</style>
-<style lang="scss">
-  @import 'prismjs/themes/prism.css';
-  // 换方式引入prism的css
 </style>

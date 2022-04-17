@@ -113,5 +113,4 @@ $border-color: #d9d9d9;
 </style>
 <style lang="scss">
   @import 'prismjs/themes/prism.css';
-  // 换方式引入prism的css
 </style>
