@@ -5,7 +5,7 @@
       <div class="demo">
         <h2>常规用法</h2>
         <div class="demo-component">
-          <component :is="Switch1Demo"></component>
+          <Switch1Demo />
         </div>
         <div class="demo-actions">
           <Button>查看代码</Button>
@@ -17,7 +17,7 @@
       <div class="demo">
         <h2>支持 disabled</h2>
         <div class="demo-component">
-          <component :is="Switch2Demo"></component>
+          <Switch2Demo />
         </div>
         <div class="demo-actions">
           <Button>查看代码</Button>
@@ -107,4 +107,4 @@ $border-color: #d9d9d9;
     }
   }
 }
-</style>
+<style

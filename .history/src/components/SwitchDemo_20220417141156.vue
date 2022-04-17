@@ -17,7 +17,7 @@
       <div class="demo">
         <h2>支持 disabled</h2>
         <div class="demo-component">
-          <component :is="Switch2Demo"></component>
+          
         </div>
         <div class="demo-actions">
           <Button>查看代码</Button>
