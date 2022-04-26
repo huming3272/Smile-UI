@@ -123,7 +123,7 @@ export default {
     top: 0;
     h2{
       >.router-link-active{
-        // background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
       }
     }
     >ol{

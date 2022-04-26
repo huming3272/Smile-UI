@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logoWrapper">
+    <div class="logo">
       <router-link class="logo" to="/" v-show="logoShow">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-Smile"></use>
@@ -51,6 +51,7 @@ export default {
 <style lang="scss" scoped>
 $color: #007974;
 .topnav {
+  border: 1px solid red;
   color: $color;
   // background: pink;
   display: flex;
@@ -62,15 +63,12 @@ $color: #007974;
   z-index: 10;
   justify-content: center;
   align-items: center;
-  > .logoWrapper {
-    height: 37px;
-    > .logo {
-      max-width: 6em;
-      margin-right: auto;
-      > svg {
-        width: 32px;
-        height: 32px;
-      }
+  > .logo {
+    max-width: 6em;
+    margin-right: auto;
+    > svg {
+      width: 32px;
+      height: 32px;
     }
   }
   > .menu {

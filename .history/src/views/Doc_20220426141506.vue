@@ -103,12 +103,11 @@ export default {
   > .nav {
     flex-shrink: 0;
     position: relative;
-    z-index: 21;
   }
   > .content {
     flex-grow: 1;
     padding-top: 53px;
-    padding-left: 200px;
+    // padding-left: 200px;
     @media (max-width: 500px) {
       padding-left: 0; 
     }
@@ -118,12 +117,11 @@ export default {
   display: flex;
   > aside {
     flex-shrink: 0;
-    position: absolute;
-    z-index: 20;
+    position: relative;
     top: 0;
     h2{
       >.router-link-active{
-        // background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
       }
     }
     >ol{

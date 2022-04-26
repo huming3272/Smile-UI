@@ -51,6 +51,7 @@ export default {
 <style lang="scss" scoped>
 $color: #007974;
 .topnav {
+  border: 1px solid red;
   color: $color;
   // background: pink;
   display: flex;
@@ -62,15 +63,12 @@ $color: #007974;
   z-index: 10;
   justify-content: center;
   align-items: center;
-  > .logoWrapper {
-    height: 37px;
-    > .logo {
-      max-width: 6em;
-      margin-right: auto;
-      > svg {
-        width: 32px;
-        height: 32px;
-      }
+  > .logo {
+    max-width: 6em;
+    margin-right: auto;
+    > svg {
+      width: 32px;
+      height: 32px;
     }
   }
   > .menu {

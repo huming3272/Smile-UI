@@ -102,8 +102,7 @@ export default {
   z-index: 10;
   > .nav {
     flex-shrink: 0;
-    position: relative;
-    z-index: 21;
+    // position: relative;
   }
   > .content {
     flex-grow: 1;
@@ -118,12 +117,11 @@ export default {
   display: flex;
   > aside {
     flex-shrink: 0;
-    position: absolute;
-    z-index: 20;
+    position: relative;
     top: 0;
     h2{
       >.router-link-active{
-        // background: rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
       }
     }
     >ol{
