@@ -4,8 +4,8 @@
   </div>
 </template>
 <script lang="ts">
-  import Demo from '../components/Demo.vue'
-  import Tabs1Demo from '../components/Tabs1.demo.vue'
+  import Demo from '../Demo.vue'
+  import Tabs1Demo from '../compone/Tabs1.demo.vue'
   export default{
     components:{
       Tabs1Demo,

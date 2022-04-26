@@ -3,10 +3,11 @@
 </demo>
 <template>
   <div>
-    
+    <div>
       <Button @click="onClick" @focus="onClick" @mouseleave="onClick" >
         一个触发按钮
       </Button>
+    </div>
     <div>
       <h1>示例1</h1>
       <Button>默认</Button>
@@ -52,7 +53,7 @@
   </div>
 </template>
 <script lang="ts">
-  import Button from '../lib/Button.vue'
+  import Button from '../../lib/Button.vue'
   export default {
     components:{
       Button
