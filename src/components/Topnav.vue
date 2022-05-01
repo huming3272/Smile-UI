@@ -7,6 +7,9 @@
         </svg>
       </router-link>
     </div>
+    <div class="breadWrapper">
+      <Breadcrumb />
+    </div>
     <ul class="menu">
       <li>
         <router-link to="/doc"> 文档 </router-link>
@@ -26,26 +29,27 @@
 import { inject, Ref, ref } from "vue";
 import router from "../router/index";
 export default {
-  setup() {
-    const menuVisible = inject<Ref<boolean>>("menuVisible"); //get
-    const toggleAside = inject<Ref<boolean>>("toggleAside");
-    //inject<Ref<boolean>>('menuVisible')
-    //从全局引入menuVisible为boolean类型的Ref参数
-    // menuVisible变量可以认为是data里的
-    const toggleMenu = () => {
-      // router.push('/doc')
-      menuVisible.value = !menuVisible.value;
-      // logoShow.value = !logoShow.value;
-      //这里类似methods
-    };
-    router.afterEach((to, from) => {
-      if (to.path === "/") {
-        toggleAside.value = false;
-        menuVisible.value = true
-      }
-    });
-    return { toggleMenu, toggleAside, menuVisible };
-  },
+    setup() {
+        const menuVisible = inject<Ref<boolean>>("menuVisible"); //get
+        const toggleAside = inject<Ref<boolean>>("toggleAside");
+        //inject<Ref<boolean>>('menuVisible')
+        //从全局引入menuVisible为boolean类型的Ref参数
+        // menuVisible变量可以认为是data里的
+        const toggleMenu = () => {
+            // router.push('/doc')
+            menuVisible.value = !menuVisible.value;
+            // logoShow.value = !logoShow.value;
+            //这里类似methods
+        };
+        router.afterEach((to, from) => {
+            if (to.path === "/") {
+                toggleAside.value = false;
+                menuVisible.value = true;
+            }
+        });
+        return { toggleMenu, toggleAside, menuVisible };
+    },
+    
 };
 </script>
 <style lang="scss" scoped>

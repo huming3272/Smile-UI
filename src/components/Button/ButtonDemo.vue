@@ -1,16 +1,13 @@
 <template>
   <div>
-    <Breadcrumb/>
     <Demo :component="Button1Demo"></Demo>
   </div>
 </template>
 <script lang="ts">
   import Demo from '../Demo.vue'
   import Button1Demo from './Button1.demo.vue'
-  import Breadcrumb from '../../lib/Breadcrumb.vue'
   export default {
     components:{
-      Breadcrumb,
       Button1Demo,
       Demo
     },
