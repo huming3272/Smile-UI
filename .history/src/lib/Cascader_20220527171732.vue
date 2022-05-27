@@ -1,5 +1,5 @@
 <template>
-  <div class="cascader">
+  <div>
     <h1>级联选择器</h1>
     <input
       type="text"
@@ -47,15 +47,15 @@ export default {
             children: [
               {
                 label: "a_3_1",
-                name: "俄罗斯蓝猫",
+                name: "黑猫",
               },
               {
                 label: "a_3_2",
-                name: "暹罗猫",
+                name: "白猫",
               },
               {
                 label: "a_3_3",
-                name: "田园猫",
+                name: "绿猫",
               },
             ],
           },
@@ -121,9 +121,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-  .cascader{
-    // width: 200px;
-    // overflow:scroll;
-  }
-</style>

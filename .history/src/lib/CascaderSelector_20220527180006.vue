@@ -97,7 +97,7 @@ div {
 .active{
   border: 1px solid green;
 }
-.selector{
+.cas{
   background: grey;
 }
 </style>

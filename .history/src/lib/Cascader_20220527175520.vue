@@ -1,5 +1,5 @@
 <template>
-  <div class="cascader">
+  <div class>
     <h1>级联选择器</h1>
     <input
       type="text"
@@ -121,9 +121,3 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-  .cascader{
-    // width: 200px;
-    // overflow:scroll;
-  }
-</style>

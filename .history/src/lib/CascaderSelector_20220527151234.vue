@@ -1,14 +1,13 @@
 <template>
-  <div class="item">
+  <div class="block">
     <li v-for="item,index in source" @click="choose(index, $event)" :key="item.label"
     :class="[index==actId? 'active':'']"
-    class=""
     >
     <span>
       {{item.name}}
     </span>
     </li>
-      <div class="selector" v-if="actId>-1 && source[actId].children">
+      <div class="cas" v-if="actId>-1 && source[actId].children">
         <IniCascader  v-model:source="source[actId].children" :activeId="actId" @patch="onPatch" :selected="selected">
         </IniCascader>
       </div>
@@ -48,6 +47,7 @@ export default {
     let once = ref<boolean>(true)
     const choose = (index, event) => {
         actId.value = index
+        console.log(index, 'li索引')
         // console.log(props.source[actId.value].children, 'choose')
         // console.log(props.source[actId].children)
         // copyItem.value = copyItem.value.concat(props.itemGroud)
@@ -82,7 +82,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.item{
+.block{
   // display: flex;
   li{
     span{
@@ -97,7 +97,7 @@ div {
 .active{
   border: 1px solid green;
 }
-.selector{
+.cas{
   background: grey;
 }
 </style>

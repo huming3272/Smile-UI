@@ -1,14 +1,13 @@
 <template>
-  <div class="item">
+  <div class="block">
     <li v-for="item,index in source" @click="choose(index, $event)" :key="item.label"
     :class="[index==actId? 'active':'']"
-    class=""
     >
     <span>
       {{item.name}}
     </span>
     </li>
-      <div class="selector" v-if="actId>-1 && source[actId].children">
+      <div class="cas" v-if="actId>-1 && source[actId].children">
         <IniCascader  v-model:source="source[actId].children" :activeId="actId" @patch="onPatch" :selected="selected">
         </IniCascader>
       </div>
@@ -44,14 +43,15 @@ export default {
     let iniIndex = ref<number>()
     let actId = ref<number>()
     let copyItem = ref([])
-    let selected = ref([])
+    let selected = ref<string>('')
     let once = ref<boolean>(true)
     const choose = (index, event) => {
         actId.value = index
+        console.log(index, 'li索引')
         // console.log(props.source[actId.value].children, 'choose')
         // console.log(props.source[actId].children)
         // copyItem.value = copyItem.value.concat(props.itemGroud)
-        selected.value = [props.source[actId.value].name]
+        selected.value = [props.source[actId.value].name
         if (!props.source[actId.value].children) {
           // console.log('name', props.source[actId.value])
           // console.log(copyItem, '数组')
@@ -63,9 +63,8 @@ export default {
     const onPatch = (val) => {
       // if (props.source[props.activeId]?.name) {
         // let checkedVal = props?.source?.[props.activeId]?.name + '/' + val;
-        let checkedVal = []
-        checkedVal = selected.value.concat(val)
-        // copyItem.value.push(props.source[actId.value].name)
+        let checkedVal = val
+        copyItem.value.push(props.source[actId.value].name)
         // console.log(props.activeId, 'id', event)
       // content.emit('patch', checkedVal)
       // console.log(1)
@@ -82,7 +81,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.item{
+.block{
   // display: flex;
   li{
     span{
@@ -97,7 +96,7 @@ div {
 .active{
   border: 1px solid green;
 }
-.selector{
+.cas{
   background: grey;
 }
 </style>

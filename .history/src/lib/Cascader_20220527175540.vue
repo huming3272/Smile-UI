@@ -121,9 +121,6 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-  .cascader{
-    // width: 200px;
-    // overflow:scroll;
-  }
+<style lang="scss">
+  .cascader{}
 </style>

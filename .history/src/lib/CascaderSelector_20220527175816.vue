@@ -82,7 +82,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.item{
+.block{
   // display: flex;
   li{
     span{
@@ -97,7 +97,7 @@ div {
 .active{
   border: 1px solid green;
 }
-.selector{
+.cas{
   background: grey;
 }
 </style>

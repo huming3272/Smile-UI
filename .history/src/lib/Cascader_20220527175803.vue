@@ -123,7 +123,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .cascader{
-    // width: 200px;
-    // overflow:scroll;
+    width: 200px;
+    overflow:scroll;
   }
 </style>
