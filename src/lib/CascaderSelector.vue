@@ -1,13 +1,15 @@
 <template>
-  <div class="item">
-    <li v-for="item,index in source" @click="choose(index, $event)" :key="item.label"
-    :class="[index==actId? 'active':'']"
-    class=""
-    >
-    <span>
-      {{item.name}}
-    </span>
-    </li>
+  <div class="cascaderSelector">
+    <div class="item">
+        <li v-for="item,index in source" @click="choose(index, $event)" :key="item.label"
+          :class="[index==actId? 'active':'']"
+        >
+          <span>
+            {{item.name}}
+          </span>
+          <img v-show="item?.children?.length > 0" class="rightArrow" src="../assets/arrow-down.png" alt="">
+        </li>
+    </div>
       <div class="selector" v-if="actId>-1 && source[actId].children">
         <IniCascader  v-model:source="source[actId].children" :activeId="actId" @patch="onPatch" :selected="selected">
         </IniCascader>
@@ -82,22 +84,39 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.cascaderSelector{
+  display: flex;
+  background: white;
 .item{
-  // display: flex;
+  border-right: 1px solid rgb(213, 213, 255);
+  border-top: 1px solid rgb(213, 213, 255);
+  border-bottom: 1px solid rgb(213, 213, 255);
+}
+.rightBorder{
+  border-right: 1px solid rgb(213, 213, 255);
+}
   li{
-    span{
-      border:1px solid blue;
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100px;
+    &:hover{
+      background: rgb(207, 207, 255);
+    }
+    .rightArrow{
+      transform: rotate(-90deg);
+      width: 10px;
     }
   }
 }
 div {
-  border-bottom: 1px solid red;
-  margin-left: 10px;
+  // margin-left: 10px;
 }
 .active{
-  border: 1px solid green;
+  background: rgb(164, 164, 255);
 }
 .selector{
-  background: grey;
+
 }
 </style>

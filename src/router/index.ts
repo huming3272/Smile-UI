@@ -7,7 +7,7 @@ import Dialog from '../components/Dialog/DialogDemo.vue'
 import Tabs from '../components/Tabs/TabsDemo.vue'
 import DocDemo from '../components/DocDemo.vue'
 import Breadcrumb from '../components/Breadcrumb/BreadcrumbDemo.vue'
-import Cascader from '../lib/Cascader.vue'
+import Cascader from '../components/Cascader/CascaderDemo.vue'
 
 import Intro from '../views/Intro.vue';
 import GetStarted from '../views/GetStarted.vue'
@@ -29,22 +29,15 @@ const router = createRouter(
             {
                 path: '/',
                 meta: {
-                    title: '级联选择器'
-                },
-                 component: Cascader,
-            },
-            {
-                path: '/',
-                meta: {
                     title: '首页'
                 },
-                 component: Home,
+                component: Home,
             },
             {
                 path: '/doc', component: Doc,
                 meta: {
-                            title: '文档'
-                        },
+                    title: '文档'
+                },
                 children: [
                     {
                         path: '', component: DocDemo,
@@ -80,6 +73,13 @@ const router = createRouter(
                         }
                     },
                     {
+                        path: 'cascader',
+                        component: Cascader,
+                        meta: {
+                            title: '级联选择器'
+                        },
+                    },
+                    {
                         path: "intro", component: md('intro'),
                         meta: {
                             title: '介绍'
@@ -105,10 +105,10 @@ const router = createRouter(
                 component: notFound
             },
             {
-                path: '/:pathMatch(.*)',redirect: '/404',
+                path: '/:pathMatch(.*)', redirect: '/404',
                 //  catchAll
                 // 配置任意未知页面404未找到
-                meta:{
+                meta: {
                     title: '404'
                 }
             }

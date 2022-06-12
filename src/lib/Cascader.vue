@@ -1,19 +1,29 @@
 <template>
-  <div class="cascader">
-    <h1>级联选择器</h1>
-    <input
-      type="text"
-      @focus="handleClick('focus')"
-      @blur="handleClick('blur')"
-      v-model="checkedValue"
-    />
-    <CascaderSelector
-      v-model:source="util"
-      @patch="onPatch"
-      v-if="open"
-      id="style"
-    />
-  </div>
+      <div class="cascader"
+      @click.stop=""
+      >
+      <div class="inputWrapper"
+      >
+        <input
+          type="text"
+          v-model="checkedValue"
+          @focus="handleClick()"
+        />
+        <img
+          class="arrow"
+          :class="{ rotateArrow: open }"
+          src="../assets/arrow-down.png"
+          alt=""
+        />
+      </div>
+      <CascaderSelector
+        class="CascaderSelector"
+        v-model:source="util"
+        @patch="onPatch"
+        v-show="open"
+        id="style"
+      />
+    </div>
 </template>
 <script lang="ts">
 import CascaderSelector from "./CascaderSelector.vue";
@@ -25,7 +35,7 @@ export default {
   },
   setup() {
     let checkedValue = ref<string>("");
-    let open = ref<boolean>(true);
+    let open = ref<boolean>(false);
     const data = [
       {
         label: "a",
@@ -96,19 +106,18 @@ export default {
         ],
       },
     ];
-    const handleClick = (event) => {
-      if (event === "focus") {
-        open.value = true;
-        checkedValue.value = "";
-      }
-      // else{
-      //   open.value = false
-      // }
+    document.addEventListener('click', function(e){
+      open.value = false
+    })
+    const handleClick = () => {
+          open.value = true;
     };
     const onPatch = (val) => {
       let string = val.join("/");
       checkedValue.value = string;
+      window.alert(`你选择了${string}`);
       open.value = false;
+      console.log(111)
     };
     const util = ref(data);
     return {
@@ -122,8 +131,44 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  .cascader{
-    // width: 200px;
-    // overflow:scroll;
+.window{
+  // height: 100vh;
+}
+.cascader {
+  // height: auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(213, 213, 255);
+  border-radius: 5px;
+  position: relative;
+}
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border: none;
+    width: 170px;
+    padding-left: 10px;
+    &:focus {
+      outline: none;
+    }
   }
+  .arrow {
+    transition: all 0.25s;
+    transform: rotate(0deg);
+    width: 20px;
+  }
+}
+
+.CascaderSelector {
+  margin-left: 20px;
+  border-left: 1px solid rgb(213, 213, 255);
+  position: absolute;
+  top: 25px;
+}
+.rotateArrow {
+  transform: rotate(-180deg) !important;
+}
 </style>
