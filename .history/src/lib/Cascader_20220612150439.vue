@@ -1,0 +1,174 @@
+<template>
+      <div class="cascader"
+      @click.stop=""
+      >
+      <div class="inputWrapper"
+      >
+        <input
+          type="text"
+          v-model="checkedValue"
+          @focus="handleClick()"
+        />
+        <img
+          class="arrow"
+          :class="{ rotateArrow: open }"
+          src="../assets/arrow-down.png"
+          alt=""
+        />
+      </div>
+      <CascaderSelector
+        class="CascaderSelector"
+        v-model:source="util"
+        @patch="onPatch"
+        v-show="open"
+        id="style"
+      />
+    </div>
+</template>
+<script lang="ts">
+import CascaderSelector from "./CascaderSelector.vue";
+import { ref } from "vue";
+export default {
+  name: "Cascader",
+  components: {
+    CascaderSelector,
+  },
+  setup() {
+    let checkedValue = ref<string>("");
+    let open = ref<boolean>(false);
+    const data = [
+      {
+        label: "a",
+        name: "动物",
+
+        children: [
+          {
+            label: "a_1",
+            name: "狮子",
+          },
+          {
+            label: "a_2",
+            name: "老虎",
+          },
+          {
+            label: "a_3",
+            name: "猫咪",
+
+            children: [
+              {
+                label: "a_3_1",
+                name: "俄罗斯蓝猫",
+              },
+              {
+                label: "a_3_2",
+                name: "暹罗猫",
+              },
+              {
+                label: "a_3_3",
+                name: "田园猫",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        label: "b",
+        name: "昆虫",
+
+        children: [
+          {
+            label: "b_1",
+            name: "蚂蚁",
+          },
+          {
+            label: "b_2",
+            name: "蟑螂",
+
+            children: [
+              {
+                label: "b_2_1",
+                name: "白蟑螂",
+              },
+              {
+                label: "b_2_2",
+                name: "黑蟑螂",
+              },
+              {
+                label: "b_2_3",
+                name: "红蟑螂",
+              },
+            ],
+          },
+          {
+            label: "b_3",
+            name: "甲虫",
+          },
+        ],
+      },
+    ];
+    document.addEventListener('click', function(e){
+      open.value = false
+    })
+    const handleClick = () => {
+          open.value = true;
+    };
+    const onPatch = (val) => {
+      let string = val.join("/");
+      checkedValue.value = string;
+      window.alert(`你选择了${string}`);
+      open.value = false;
+      console.log(111)
+    };
+    const util = ref(data);
+    return {
+      util,
+      checkedValue,
+      open,
+      onPatch,
+      handleClick,
+    };
+  },
+};
+</script>
+<style lang="scss" scoped>
+.window{
+  // height: 100vh;
+}
+.cascader {
+  // height: auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(213, 213, 255);
+  border-radius: 5px;
+  position: relative;
+}
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border: none;
+    width: 170px;
+    padding-left: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .arrow {
+    transition: all 0.25s;
+    transform: rotate(0deg);
+    width: 20px;
+  }
+}
+
+.CascaderSelector {
+  margin-left: 20px;
+  border-left: 1px solid rgb(213, 213, 255);
+  position: absolute;
+  top: 25px;
+}
+.rotateArrow {
+  transform: rotate(-180deg) !important;
+}
+</style>
