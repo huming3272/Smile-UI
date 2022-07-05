@@ -53,8 +53,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$color: rgb(114, 161, 211);
-// #007974
+$color: #007974;
+140, 196, 255, 0.8
 .topnav {
   color: $color;
   // background: pink;
@@ -75,9 +75,6 @@ $color: rgb(114, 161, 211);
       > svg {
         width: 32px;
         height: 32px;
-        border-radius: 50%;
-        // box-shadow: 0px 0px 5px #888888;
-        background: rgb(124, 124, 124);
       }
     }
   }

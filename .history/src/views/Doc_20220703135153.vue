@@ -145,8 +145,6 @@ export default {
 }
 aside {
   // background: lightblue;
-  // background: rgba(140, 196, 255, 0.5);
-  background: #c5e1ff;
   width: 200px;
   // padding: 16px 0 16px 16px;
   position: fixed;

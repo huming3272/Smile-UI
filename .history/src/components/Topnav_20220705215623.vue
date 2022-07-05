@@ -77,7 +77,7 @@ $color: rgb(114, 161, 211);
         height: 32px;
         border-radius: 50%;
         // box-shadow: 0px 0px 5px #888888;
-        background: rgb(124, 124, 124);
+        background: black;
       }
     }
   }

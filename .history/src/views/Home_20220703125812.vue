@@ -47,16 +47,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: rgba(140, 196, 255, 0.8);
-// #02bcb0
+$green: #02bcb0;
 $border-radius: 4px;
 $color: #007974;
-// rgba(53, 73, 94, 0.1)
 .topnavAndBanner {
   background: linear-gradient(
     145deg,
-    rgba(53, 73, 94, 0.1) 0%,
-   rgba(140, 196, 255, 0.8) 100%
+    rgba(53, 73, 94, 1) 0%,
+  //   rgba(140, 196, 255, 1) 100%
   );
   // rgba(227, 255, 253, 1) 0%,
   //   rgba(183, 233, 230, 1) 100%

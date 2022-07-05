@@ -47,7 +47,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: rgba(140, 196, 255, 0.8);
+$green: ;
 // #02bcb0
 $border-radius: 4px;
 $color: #007974;
