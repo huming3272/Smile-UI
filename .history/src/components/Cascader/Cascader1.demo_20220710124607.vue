@@ -91,7 +91,7 @@ export default {
       },
       {
         label: "d",
-        name: "鸟类",
+        name: "鱼类",
       }
     ];
     const sourceData = ref(data)

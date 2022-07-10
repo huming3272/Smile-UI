@@ -88,10 +88,10 @@ export default {
       {
         label: "c",
         name: "鱼类",
-      },
+      }，
       {
-        label: "d",
-        name: "鸟类",
+        label: "c",
+        name: "鱼类",
       }
     ];
     const sourceData = ref(data)
