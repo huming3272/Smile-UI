@@ -9,15 +9,16 @@ import DocDemo from '../components/DocDemo.vue'
 import Breadcrumb from '../components/Breadcrumb/BreadcrumbDemo.vue'
 import Cascader from '../components/Cascader/CascaderDemo.vue'
 
-import Intro from '../markdown/intro.md';
-import GetStarted from '../markdown/get-started.md'
-import Install from '../markdown/install.md'
+import Intro from '../views/Intro.vue';
+import GetStarted from '../views/GetStarted.vue'
+import Install from '../views/Install.vue'
 import Text from '../lib/text.vue'
 import notFound from '../views/notFound.vue'
 
 import { h } from 'vue';
 import Markdown from '../components/Markdown.vue';
-const md = string => h(Markdown, { content: string, key: string })
+const md = (filename) => { return h(Markdown, { path: `../markdown/${filename}.md`, key: filename }) }
+const md = string => h(Mark)
 //  必须加上不同的key，不然切换组件后，渲染会失败
 const history = createWebHashHistory()
 // hash型路由
@@ -80,19 +81,19 @@ const router = createRouter(
                         },
                     },
                     {
-                        path: "intro", component: md(Intro),
+                        path: "intro", component: md('intro'),
                         meta: {
                             title: '介绍'
                         }
                     },
                     {
-                        path: "get-started", component: md(GetStarted),
+                        path: "get-started", component: md('get-started'),
                         meta: {
                             title: '开始'
                         }
                     },
                     {
-                        path: "install", component: md(Install),
+                        path: "install", component: md('install'),
                         meta: {
                             title: '安装'
                         }

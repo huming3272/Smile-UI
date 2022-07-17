@@ -8,4 +8,4 @@ declare module '*.md' {
   const str: string
   export default str
 } 
-//   用于给ts编译器解析.md文件
+//   用于给ts编译器解析.vue文件

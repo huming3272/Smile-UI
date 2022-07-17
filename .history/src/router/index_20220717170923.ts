@@ -10,8 +10,8 @@ import Breadcrumb from '../components/Breadcrumb/BreadcrumbDemo.vue'
 import Cascader from '../components/Cascader/CascaderDemo.vue'
 
 import Intro from '../markdown/intro.md';
-import GetStarted from '../markdown/get-started.md'
-import Install from '../markdown/install.md'
+import GetStarted from '../markdown/GetStarted.vue'
+import Install from '../views/Install.vue'
 import Text from '../lib/text.vue'
 import notFound from '../views/notFound.vue'
 
