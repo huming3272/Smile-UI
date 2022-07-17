@@ -7,7 +7,7 @@
           <span>
             {{item.name}}
           </span>
-          <img v-show="item.children && item.children.length > 0" class="rightArrow" src="../assets/arrow-down.png" alt="">
+          <img v-show="item.children?.length > 0" class="rightArrow" src="../assets/arrow-down.png" alt="">
         </li>
     </div>
       <div class="selector" v-if="actId>-1 && source[actId].children">

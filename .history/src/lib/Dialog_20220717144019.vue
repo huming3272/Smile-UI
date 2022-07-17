@@ -60,14 +60,14 @@ export default {
       }
     };
     const ok = () => {
-      if (props.ok && props.ok() !== false) {
+      if (props.ok() !== false) {
         // 链判断运算符 有ok时执行
         close();
       }
     };
     const cancel = () => {
       // context.emit("cancel");
-      props.cancel && props.cancel()
+      props.cancel?.()
       close();
     };
     return {
