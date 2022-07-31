@@ -5,6 +5,10 @@ import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
 
 export default {
+  base: './',
+  // 基本路径为根目录
+  assetsDir: 'assets',
+  // 资源目录
   plugins: [md()],
   // 使用了vue-loader的自定义块，
   vueCustomBlockTransforms: {
