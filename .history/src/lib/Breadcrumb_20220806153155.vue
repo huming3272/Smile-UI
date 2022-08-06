@@ -32,45 +32,45 @@ export default {
     };
     // 获取用于vue2的route的对象
     let route = router.currentRoute.value;
-    let navList = ref([]);
+    let navList = ref([])
     if (route.matched.length > 0) {
-      navList.value = getRouteList(route);
+      navList.value = getRouteList(route)
     }
     router.afterEach((to, from) => {
-      navList.value = getRouteList(to);
+        navList.value = getRouteList(to)
       // 获取进入的页面的path
-    });
+      });
     return {
-      navList,
+      navList
     };
   },
 };
 </script>
 <style lang="scss">
-.breadcrumbWrapper {
+.breadcrumbWrapper{
   display: inline-flex;
   border: 1px solid #add8e6;
   border-radius: 5px;
-  .breadcrumb {
-    display: flex;
-    justify-content: start;
-    > li {
-      margin-right: 5px;
+.breadcrumb {
+  display: flex;
+  justify-content: start;
+  > li {
+    margin-right: 5px;
+    > a {
+      text-decoration: none;
       display: flex;
+      border:1px solid red;
       align-items: center;
-      > a {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        > span {
-          margin-left: 5px;
-        }
-        > .icon {
-          width: 20px;
-          height: 20px;
-        }
+      > span {
+        margin-left: 5px;
+      }
+      > .icon {
+        width: 20px;
+        height: 20px;
       }
     }
   }
 }
+}
+
 </style>
