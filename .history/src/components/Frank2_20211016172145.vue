@@ -1,4 +1,0 @@
-<template lang="">
-    
-</template>
-scr
