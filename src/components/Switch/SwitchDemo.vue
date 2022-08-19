@@ -19,8 +19,6 @@ export default {
     return {};
   },
   setup() {
-    let route = router.currentRoute.value.matched
-    console.log(route)
     // const that = getCurrentInstance().proxy;
     // //改变this指向后可以使用vue2里的$forceUpdate()
     return {

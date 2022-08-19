@@ -7,9 +7,6 @@
         </svg>
       </router-link>
     </div>
-    <div class="breadWrapper">
-      <Breadcrumb />
-    </div>
     <ul class="menu">
       <li>
         <router-link to="/doc"> 文档 </router-link>

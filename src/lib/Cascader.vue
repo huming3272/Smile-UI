@@ -12,7 +12,6 @@
     <CascaderSelector
       class="CascaderSelector"
       v-model:source="util"
-      :message="message"
       @patch="onPatch"
       v-show="open"
       id="style"
@@ -37,11 +36,9 @@ export default {
   },
 
   setup(props, content) {
-
     let checkedValue = ref<string>("");
     let open = ref<boolean>(false);
     const util = props.sourceData
-    console.log(util, '依赖')
     document.addEventListener("click", function (e) {
       open.value = false;
     });

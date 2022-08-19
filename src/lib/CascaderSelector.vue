@@ -11,8 +11,8 @@
         </li>
     </div>
       <div class="selector" v-if="actId>-1 && source[actId].children">
-        <IniCascader  v-model:source="source[actId].children" :activeId="actId" @patch="onPatch" :selected="selected">
-        </IniCascader>
+        <CascaderSelector  v-model:source="source[actId].children" :activeId="actId" @patch="onPatch" :selected="selected">
+        </CascaderSelector>
       </div>
   </div>
 </template>
@@ -24,9 +24,9 @@ export default {
   // https://dandelioncloud.cn/article/details/1488173854068690945
   // https://dandelioncloud.cn/article/details/1426183821665615874
   name: "CascaderSelector",
-  components:{
-    IniCascader: defineAsyncComponent(() => import('./CascaderSelector.vue'))
-  },
+  // components:{
+    // IniCascader: defineAsyncComponent(() => import('./CascaderSelector.vue'))
+  // },
   props: {
       source: {
           type: Array,
@@ -46,23 +46,15 @@ export default {
   },
   setup(props, content) {
     // console.log(props.activeId, '传递子索引')
-    let iniIndex = ref<number>()
     let actId = ref<number>()
     let copyItem = ref([])
     let selected = ref([])
     const choose = (index, event) => {
         actId.value = index
-        // console.log(props.source[actId.value].children, 'choose')
-        // console.log(props.source[actId].children)
-        // copyItem.value = copyItem.value.concat(props.itemGroud)
         selected.value = [props.source[actId.value].name]
         if (!props.source[actId.value].children) {
-          // console.log('name', props.source[actId.value])
-          // console.log(copyItem, '数组')
-          // content.emit("patch", props.source[actId.value].name)
           content.emit("patch", selected.value )
         }
-        // console.dir(event)
     }
     const onPatch = (val) => {
       // if (props.source[props.activeId]?.name) {
@@ -103,6 +95,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     min-width: 100px;
+    user-select: none;
     &:hover{
       background: rgb(207, 207, 255);
     }
