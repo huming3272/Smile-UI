@@ -43,7 +43,7 @@
             <router-link to="/doc/breadcrumb">Breadcrumb 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/cascader">cascader 组件</router-link>
+            <router-link to="/doc/cascader">Cascader 组件</router-link>
           </li>
         </ol>
       </aside>
@@ -145,7 +145,8 @@ export default {
 }
 aside {
   // background: lightblue;
-  background: rgba(140, 196, 255, 0.5);
+  // background: rgba(140, 196, 255, 0.5);
+  background: #c5e1ff;
   width: 200px;
   // padding: 16px 0 16px 16px;
   position: fixed;
