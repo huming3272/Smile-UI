@@ -12,7 +12,7 @@ import { terser } from "rollup-plugin-terser"
 // 用来把js代码转化变得简短，减小文件和对代码的混淆
 import md from 'rollup-plugin-md'
 // 把markdown变成js
-// import resolve from 'rollup-plugin-node-resolve'
+import resolve from 'rollup-plugin-node-resolve'
 export default {
   input: 'src/lib/index.ts',
   //  输入文件
@@ -26,13 +26,13 @@ export default {
     // 输出路径
     format: 'umd',
     // UNICODE(UCS-2)格式
-    plugins: [terser()]
+    plugins: [terser(),resolve()]
     // 之前提到的代码压缩插件
   },{
     name: 'wheel-smile-ui',
     file: 'dist/lib/smileUi.esm.js',
     format: 'es',
-    plugins: [terser()]
+    plugins: [terser(),resolve()]
   }],
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),

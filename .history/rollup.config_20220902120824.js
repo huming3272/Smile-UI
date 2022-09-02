@@ -12,7 +12,7 @@ import { terser } from "rollup-plugin-terser"
 // 用来把js代码转化变得简短，减小文件和对代码的混淆
 import md from 'rollup-plugin-md'
 // 把markdown变成js
-// import resolve from 'rollup-plugin-node-resolve'
+import resolve from 'rollup-plugin-node-resolve'
 export default {
   input: 'src/lib/index.ts',
   //  输入文件
