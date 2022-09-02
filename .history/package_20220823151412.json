@@ -1,0 +1,36 @@
+{
+  "name": "Smile-Ui",
+  "version": "0.0.0",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/Smile-Ui.js",
+  "module": "dist/lib/Smile-Ui.esm.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "resolutions": {
+    "node-sass": "npm:sass@1.26.11"
+  },
+  "dependencies": {
+    
+    
+    
+    
+    
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "3.0.3",
+    "@vue/compiler-sfc": "3.0.0",
+    "rollup-plugin-esbuild": "4.9.3",
+    "rollup-plugin-scss": "3.0.0",
+    "rollup-plugin-terser": "7.0.2",
+    "sass": "1.54.5",
+    "vite": "3.0.9",
+    "marked": "1.1.1",
+    "vue": "3.2.37",
+    "github-markdown-css": "4.0.0",
+    "vue-router": "4.0.0"
+  }
+}
