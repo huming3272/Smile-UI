@@ -27,17 +27,14 @@ export default {
     format: 'umd',
     // UNICODE(UCS-2)格式
     plugins: [
-      resolve({preferBuiltins: false})
+      resolve({})
       ,terser()]
     // 之前提到的代码压缩插件
   },{
     name: 'wheel-smile-ui',
     file: 'dist/lib/smile-ui.esm.js',
     format: 'es',
-    plugins: [
-      resolve({preferBuiltins: false}),
-      terser()
-    ]
+    plugins: [terser()]
   }],
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),

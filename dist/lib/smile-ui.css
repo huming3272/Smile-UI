@@ -1,38 +1,58 @@
-@import "prismjs/themes/prism.css";
-.gulu-switch {
-  outline: none;
-  height: 22px;
-  width: 44px;
-  border: none;
-  background: #cccccc;
-  border-radius: 11px;
+.gulu-tabs-nav {
+  display: flex;
+  color: #333;
+  border-bottom: 1px solid #d9d9d9;
   position: relative;
-  transition: background-color 500ms;
+}
+.gulu-tabs-nav-item {
+  padding: 8px 0;
+  margin: 0 16px;
   cursor: pointer;
 }
-.gulu-switch > span {
+.gulu-tabs-nav-item:first-child {
+  margin-left: 0;
+}
+.gulu-tabs-nav-item.selected {
+  color: #40a9ff;
+}
+.gulu-tabs-nav-indicator {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 18px;
-  width: 18px;
-  background: white;
-  box-shadow: 0 0 5px 1px rgb(0, 0, 0);
-  transition: left 250ms;
-  border-radius: 9px;
+  height: 3px;
+  background: #40a9ff;
+  left: 0;
+  bottom: -1px;
+  width: 100px;
+  transition: all 250ms;
 }
-.gulu-switch.gulu-disabled {
-  cursor: not-allowed;
+.gulu-tabs-content {
+  padding: 8px 0;
 }
-.gulu-switch.gulu-checked {
-  background: #2d8cf0;
+
+.breadcrumbWrapper {
+  display: inline-flex;
+  border: 1px solid #add8e6;
+  border-radius: 5px;
 }
-.gulu-switch.gulu-checked > span {
-  left: calc(100% - 18px - 2px);
+.breadcrumbWrapper .breadcrumb {
+  display: flex;
+  justify-content: start;
 }
-.gulu-switch.gulu-checked:active > span {
-  width: 22px;
-  margin-left: -4px;
+.breadcrumbWrapper .breadcrumb > li {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbWrapper .breadcrumb > li > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbWrapper .breadcrumb > li > a > span {
+  margin-left: 5px;
+}
+.breadcrumbWrapper .breadcrumb > li > a > .icon {
+  width: 20px;
+  height: 20px;
 }
 
 div .gulu-button {
@@ -171,36 +191,6 @@ div .gulu-button > .gulu-loadingIndicator {
   }
 }
 
-.gulu-tabs-nav {
-  display: flex;
-  color: #333;
-  border-bottom: 1px solid #d9d9d9;
-  position: relative;
-}
-.gulu-tabs-nav-item {
-  padding: 8px 0;
-  margin: 0 16px;
-  cursor: pointer;
-}
-.gulu-tabs-nav-item:first-child {
-  margin-left: 0;
-}
-.gulu-tabs-nav-item.selected {
-  color: #40a9ff;
-}
-.gulu-tabs-nav-indicator {
-  position: absolute;
-  height: 3px;
-  background: #40a9ff;
-  left: 0;
-  bottom: -1px;
-  width: 100px;
-  transition: all 250ms;
-}
-.gulu-tabs-content {
-  padding: 8px 0;
-}
-
 .gulu-dialog {
   background: white;
   border-radius: 4px;
@@ -263,31 +253,40 @@ div .gulu-button > .gulu-loadingIndicator {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.breadcrumbWrapper {
-  display: inline-flex;
-  border: 1px solid #add8e6;
-  border-radius: 5px;
+.gulu-switch {
+  outline: none;
+  height: 22px;
+  width: 44px;
+  border: none;
+  background: #cccccc;
+  border-radius: 11px;
+  position: relative;
+  transition: background-color 500ms;
+  cursor: pointer;
 }
-.breadcrumbWrapper .breadcrumb {
-  display: flex;
-  justify-content: start;
+.gulu-switch > span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  background: white;
+  box-shadow: 0 0 5px 1px rgb(0, 0, 0);
+  transition: left 250ms;
+  border-radius: 9px;
 }
-.breadcrumbWrapper .breadcrumb > li {
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
+.gulu-switch.gulu-disabled {
+  cursor: not-allowed;
 }
-.breadcrumbWrapper .breadcrumb > li > a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
+.gulu-switch.gulu-checked {
+  background: #2d8cf0;
 }
-.breadcrumbWrapper .breadcrumb > li > a > span {
-  margin-left: 5px;
+.gulu-switch.gulu-checked > span {
+  left: calc(100% - 18px - 2px);
 }
-.breadcrumbWrapper .breadcrumb > li > a > .icon {
-  width: 20px;
-  height: 20px;
+.gulu-switch.gulu-checked:active > span {
+  width: 22px;
+  margin-left: -4px;
 }
 
 .cascader {

@@ -36,8 +36,7 @@ export default {
     format: 'es',
     plugins: [
       resolve({preferBuiltins: false}),
-      terser()
-    ]
+      terser()]
   }],
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),

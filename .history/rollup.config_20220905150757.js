@@ -34,10 +34,7 @@ export default {
     name: 'wheel-smile-ui',
     file: 'dist/lib/smile-ui.esm.js',
     format: 'es',
-    plugins: [
-      resolve({preferBuiltins: false}),
-      terser()
-    ]
+    plugins: [terser()]
   }],
   plugins: [
     scss({ include: /\.scss$/, sass: dartSass }),

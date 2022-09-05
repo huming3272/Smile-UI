@@ -65,6 +65,9 @@ div{
     $orange: rgb(252, 151, 0);
     $grey: grey;
     .gulu-button {
+        &::focus:{
+            
+        }
         box-sizing: border-box;
         height: $h;
         padding: 0 12px;
@@ -211,7 +214,7 @@ div{
             }
     }
         @keyframes gulu-spin {
-            0%{transform: } 
+            0%{transform: rotate(0deg)} 
             100%{transform: rotate(360deg)} 
         }
 }
