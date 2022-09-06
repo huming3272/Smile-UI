@@ -37,7 +37,6 @@ export default {
     file: 'dist/lib/smile-ui.esm.js',
     format: 'es',
     plugins: [
-      image(),
       resolve({preferBuiltins: false}),
       terser()
     ]

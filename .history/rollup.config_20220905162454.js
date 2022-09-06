@@ -28,7 +28,6 @@ export default {
     format: 'umd',
     // UNICODE(UCS-2)格式
     plugins: [
-      image(),
       resolve({preferBuiltins: false})
       ,terser()]
     // 之前提到的代码压缩插件
@@ -37,7 +36,6 @@ export default {
     file: 'dist/lib/smile-ui.esm.js',
     format: 'es',
     plugins: [
-      image(),
       resolve({preferBuiltins: false}),
       terser()
     ]
