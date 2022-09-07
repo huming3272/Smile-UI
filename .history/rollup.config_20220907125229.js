@@ -40,8 +40,12 @@ export default {
     scss({ include: /\.scss$/, sass: dartSass }),
     // 对所有的scss文件进行编译
     vue({
-      include: /\.vue$/,
+      include: /\.\/src?\/lib\/\.vue$/,
       // 对所有的vue文件进行编译
+    }),
+    md({
+      include: /\.md$/
+      // 对所有的md文件进行编译
     }),
     esbuild({
       include: /\.[jt]s$/,
@@ -50,9 +54,5 @@ export default {
       target: 'es2015' 
       //  es6以下不支持
     }),
-    md({
-      include: /\.md$/
-      // 对所有的md文件进行编译
-    })
   ],
 } 

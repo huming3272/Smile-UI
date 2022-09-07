@@ -1,4 +1,4 @@
-@import "prismjs/themes/prism.css";
+
 .gulu-switch {
   outline: none;
   height: 22px;
@@ -263,33 +263,6 @@ div .gulu-button > .gulu-loadingIndicator {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.breadcrumbWrapper {
-  display: inline-flex;
-  border: 1px solid #add8e6;
-  border-radius: 5px;
-}
-.breadcrumbWrapper .breadcrumb {
-  display: flex;
-  justify-content: start;
-}
-.breadcrumbWrapper .breadcrumb > li {
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
-}
-.breadcrumbWrapper .breadcrumb > li > a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-.breadcrumbWrapper .breadcrumb > li > a > span {
-  margin-left: 5px;
-}
-.breadcrumbWrapper .breadcrumb > li > a > .icon {
-  width: 20px;
-  height: 20px;
-}
-
 .cascader {
   width: 200px;
   display: flex;
@@ -333,6 +306,33 @@ div .gulu-button > .gulu-loadingIndicator {
 
 .rotateArrow {
   transform: rotate(-180deg) !important;
+}
+
+.breadcrumbWrapper {
+  display: inline-flex;
+  border: 1px solid #add8e6;
+  border-radius: 5px;
+}
+.breadcrumbWrapper .breadcrumb {
+  display: flex;
+  justify-content: start;
+}
+.breadcrumbWrapper .breadcrumb > li {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbWrapper .breadcrumb > li > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbWrapper .breadcrumb > li > a > span {
+  margin-left: 5px;
+}
+.breadcrumbWrapper .breadcrumb > li > a > .icon {
+  width: 20px;
+  height: 20px;
 }
 
 .cascaderSelector {
@@ -515,32 +515,6 @@ main {
   overflow: auto;
 }
 
-.demo {
-  border: 1px solid #d9d9d9;
-  margin: 16px 0 32px;
-}
-.demo > h2 {
-  font-size: 20px;
-  padding: 8px 16px;
-  border-bottom: 1px solid #d9d9d9;
-}
-.demo-component {
-  padding: 16px;
-}
-.demo-actions {
-  padding: 8px 16px;
-  border-top: 1px dashed #d9d9d9;
-}
-.demo-code {
-  padding: 8px 16px;
-  border-top: 1px dashed #d9d9d9;
-}
-.demo-code > pre {
-  line-height: 1.1;
-  font-family: Consolas, "Courier New", Courier, monospace;
-  margin: 0;
-}
-
 .topnav {
   color: rgb(114, 161, 211);
   display: flex;
@@ -590,4 +564,30 @@ main {
   .topnav > .toggleAside {
     display: block;
   }
+}
+
+.demo {
+  border: 1px solid #d9d9d9;
+  margin: 16px 0 32px;
+}
+.demo > h2 {
+  font-size: 20px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.demo-component {
+  padding: 16px;
+}
+.demo-actions {
+  padding: 8px 16px;
+  border-top: 1px dashed #d9d9d9;
+}
+.demo-code {
+  padding: 8px 16px;
+  border-top: 1px dashed #d9d9d9;
+}
+.demo-code > pre {
+  line-height: 1.1;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  margin: 0;
 }

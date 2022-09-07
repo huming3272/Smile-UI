@@ -33,6 +33,7 @@ export default {
     file: 'dist/lib/smile-ui.esm.js',
     format: 'es',
     plugins: [
+
       terser()
     ]
   }],
@@ -43,6 +44,10 @@ export default {
       include: /\.vue$/,
       // 对所有的vue文件进行编译
     }),
+    md({
+      include: /\.md$/
+      // 对所有的md文件进行编译
+    }),
     esbuild({
       include: /\.[jt]s$/,
       // 对所有的ts、js编译成ie支持的js文件
@@ -50,9 +55,5 @@ export default {
       target: 'es2015' 
       //  es6以下不支持
     }),
-    md({
-      include: /\.md$/
-      // 对所有的md文件进行编译
-    })
   ],
 } 

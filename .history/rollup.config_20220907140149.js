@@ -50,6 +50,7 @@ export default {
       target: 'es2015' 
       //  es6以下不支持
     }),
+    
     md({
       include: /\.md$/
       // 对所有的md文件进行编译
