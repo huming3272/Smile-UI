@@ -1,4 +1,3 @@
-@import "prismjs/themes/prism.css";
 .gulu-switch {
   outline: none;
   height: 22px;
@@ -33,6 +32,108 @@
 .gulu-switch.gulu-checked:active > span {
   width: 22px;
   margin-left: -4px;
+}
+
+.gulu-tabs-nav {
+  display: flex;
+  color: #333;
+  border-bottom: 1px solid #d9d9d9;
+  position: relative;
+}
+.gulu-tabs-nav-item {
+  padding: 8px 0;
+  margin: 0 16px;
+  cursor: pointer;
+}
+.gulu-tabs-nav-item:first-child {
+  margin-left: 0;
+}
+.gulu-tabs-nav-item.selected {
+  color: #40a9ff;
+}
+.gulu-tabs-nav-indicator {
+  position: absolute;
+  height: 3px;
+  background: #40a9ff;
+  left: 0;
+  bottom: -1px;
+  width: 100px;
+  transition: all 250ms;
+}
+.gulu-tabs-content {
+  padding: 8px 0;
+}
+
+.breadcrumbWrapper {
+  display: inline-flex;
+  border: 1px solid #add8e6;
+  border-radius: 5px;
+}
+.breadcrumbWrapper .breadcrumb {
+  display: flex;
+  justify-content: start;
+}
+.breadcrumbWrapper .breadcrumb > li {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbWrapper .breadcrumb > li > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbWrapper .breadcrumb > li > a > span {
+  margin-left: 5px;
+}
+.breadcrumbWrapper .breadcrumb > li > a > .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.cascader {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(213, 213, 255);
+  border-radius: 5px;
+  position: relative;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputWrapper input {
+  border: none;
+  width: 170px;
+  padding-left: 10px;
+}
+.inputWrapper input:focus {
+  outline: none;
+}
+.inputWrapper .arrowWrapper {
+  transition: all 0.25s;
+  transform: rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputWrapper .arrowWrapper .arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.CascaderSelector {
+  margin-left: 20px;
+  border-left: 1px solid rgb(213, 213, 255);
+  position: absolute;
+  top: 25px;
+}
+
+.rotateArrow {
+  transform: rotate(-180deg) !important;
 }
 
 div .gulu-button {
@@ -171,36 +272,6 @@ div .gulu-button > .gulu-loadingIndicator {
   }
 }
 
-.gulu-tabs-nav {
-  display: flex;
-  color: #333;
-  border-bottom: 1px solid #d9d9d9;
-  position: relative;
-}
-.gulu-tabs-nav-item {
-  padding: 8px 0;
-  margin: 0 16px;
-  cursor: pointer;
-}
-.gulu-tabs-nav-item:first-child {
-  margin-left: 0;
-}
-.gulu-tabs-nav-item.selected {
-  color: #40a9ff;
-}
-.gulu-tabs-nav-indicator {
-  position: absolute;
-  height: 3px;
-  background: #40a9ff;
-  left: 0;
-  bottom: -1px;
-  width: 100px;
-  transition: all 250ms;
-}
-.gulu-tabs-content {
-  padding: 8px 0;
-}
-
 .gulu-dialog {
   background: white;
   border-radius: 4px;
@@ -263,78 +334,6 @@ div .gulu-button > .gulu-loadingIndicator {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.breadcrumbWrapper {
-  display: inline-flex;
-  border: 1px solid #add8e6;
-  border-radius: 5px;
-}
-.breadcrumbWrapper .breadcrumb {
-  display: flex;
-  justify-content: start;
-}
-.breadcrumbWrapper .breadcrumb > li {
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
-}
-.breadcrumbWrapper .breadcrumb > li > a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-.breadcrumbWrapper .breadcrumb > li > a > span {
-  margin-left: 5px;
-}
-.breadcrumbWrapper .breadcrumb > li > a > .icon {
-  width: 20px;
-  height: 20px;
-}
-
-.cascader {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgb(213, 213, 255);
-  border-radius: 5px;
-  position: relative;
-}
-
-.inputWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.inputWrapper input {
-  border: none;
-  width: 170px;
-  padding-left: 10px;
-}
-.inputWrapper input:focus {
-  outline: none;
-}
-.inputWrapper .arrowWrapper {
-  transition: all 0.25s;
-  transform: rotate(0deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.inputWrapper .arrowWrapper .arrow {
-  width: 20px;
-  height: 20px;
-}
-
-.CascaderSelector {
-  margin-left: 20px;
-  border-left: 1px solid rgb(213, 213, 255);
-  position: absolute;
-  top: 25px;
-}
-
-.rotateArrow {
-  transform: rotate(-180deg) !important;
-}
-
 .cascaderSelector {
   display: flex;
   background: white;
@@ -371,223 +370,4 @@ div .gulu-button > .gulu-loadingIndicator {
 
 .active {
   background: rgb(164, 164, 255);
-}
-
-.topnavAndBanner {
-  background: linear-gradient(145deg, rgba(53, 73, 94, 0.1) 0%, rgba(140, 196, 255, 0.8) 100%);
-  clip-path: ellipse(80% 60% at 50% 40%);
-  padding-bottom: 1px;
-}
-
-.banner {
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.banner > .actions {
-  padding: 8px 0;
-}
-.banner > .actions a {
-  margin: 0 8px;
-  background: rgba(140, 196, 255, 0.8);
-  display: inline-block;
-  border-radius: 14px;
-  padding: 8px 24px;
-  border-radius: 4px;
-}
-.banner > .actions:hover {
-  text-decoration: none;
-}
-
-.features {
-  margin: 64px auto;
-  width: 400px;
-}
-@media (min-width: 800px) {
-  .features {
-    width: 800px;
-  }
-}
-@media (min-width: 1200px) {
-  .features {
-    width: 1200px;
-  }
-}
-.features > ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-.features > ul > li {
-  width: 400px;
-  margin: 16px 0;
-  display: grid;
-  justify-content: start;
-  align-content: space-between;
-  grid-template-areas: "icon title" "icon text";
-  grid-template-columns: 80px auto;
-  grid-template-rows: 1fr auto;
-}
-.features > ul > li > svg {
-  grid-area: icon;
-  width: 64px;
-  height: 64px;
-}
-.features > ul > li > h3 {
-  grid-area: title;
-  font-size: 28px;
-}
-.features > ul > li > p {
-  grid-area: text;
-}
-
-.router-link-active {
-  text-decoration: underline;
-}
-
-.layout {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  z-index: 10;
-}
-.layout > .nav {
-  flex-shrink: 0;
-  position: relative;
-  z-index: 21;
-}
-.layout > .content {
-  flex-grow: 1;
-  padding-left: 200px;
-}
-@media (max-width: 500px) {
-  .layout > .content {
-    padding-left: 0;
-  }
-}
-
-.content {
-  display: flex;
-}
-.content > aside {
-  flex-shrink: 0;
-  position: absolute;
-  z-index: 20;
-  top: 0;
-}
-.content > main {
-  flex-grow: 1;
-  padding: 20px 10px;
-}
-
-aside {
-  background: #c5e1ff;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 70px;
-  height: 100%;
-}
-aside > h2 {
-  margin-bottom: 4px;
-  padding: 0 16px;
-}
-aside > ol > li > a {
-  display: block;
-  padding: 4px 16px;
-  text-decoration: none;
-}
-aside > ol > li .router-link-active {
-  background: white;
-}
-@media (max-width: 500px) {
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 70px;
-  }
-}
-
-main {
-  overflow: auto;
-}
-
-.demo {
-  border: 1px solid #d9d9d9;
-  margin: 16px 0 32px;
-}
-.demo > h2 {
-  font-size: 20px;
-  padding: 8px 16px;
-  border-bottom: 1px solid #d9d9d9;
-}
-.demo-component {
-  padding: 16px;
-}
-.demo-actions {
-  padding: 8px 16px;
-  border-top: 1px dashed #d9d9d9;
-}
-.demo-code {
-  padding: 8px 16px;
-  border-top: 1px dashed #d9d9d9;
-}
-.demo-code > pre {
-  line-height: 1.1;
-  font-family: Consolas, "Courier New", Courier, monospace;
-  margin: 0;
-}
-
-.topnav {
-  color: rgb(114, 161, 211);
-  display: flex;
-  padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  justify-content: space-between;
-  align-items: center;
-}
-.topnav > .logoWrapper {
-  height: 37px;
-}
-.topnav > .logoWrapper > .logo {
-  max-width: 6em;
-  margin-right: auto;
-}
-.topnav > .logoWrapper > .logo > svg {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgb(124, 124, 124);
-}
-.topnav > .menu {
-  display: flex;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-}
-.topnav > .menu > li {
-  margin: 0 1em;
-}
-.topnav > .toggleAside {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 16px;
-  top: 90%;
-  transform: translateY(-50%);
-  display: none;
-}
-@media (max-width: 500px) {
-  .topnav > .menu {
-    display: none;
-  }
-  .topnav > .toggleAside {
-    display: block;
-  }
 }

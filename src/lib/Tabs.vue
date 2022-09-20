@@ -74,7 +74,8 @@ import {
 
             defaults.forEach((tag) => {
                 //  判断类型是否和引入的Tab组件一致
-                if(tag.type !== Tab){
+                const type = tag.type?.name || tag.type
+                if(type !== Tab.name){
                     throw new Error('Tabs子组件必须为Tab')
                 }
             })
@@ -99,7 +100,7 @@ import {
                 indicator,
                 container,
                 // return出去的变量如果名字和模板中的ref名一致，
-                // 会被同名ref赋值，调用变量能得到dom树     
+                // 会被同名ref赋值，调用变量能得到dom树
                 // 这个在vue3文档中被称为“模板引用”
             }
         }
