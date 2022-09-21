@@ -64,7 +64,10 @@ import {
                 const { left: left2 } = selectedItem.value.getBoundingClientRect()
                 const left = left2 - left1
                 indicator.value.style.left = left + 'px'
-              })  
+              },{
+                flush: 'post'
+              })
+              // 如果想在侦听器回调中能访问被 Vue 更新之后的DOM，你需要指明 flush: 'post' 选项
             })
 
             
