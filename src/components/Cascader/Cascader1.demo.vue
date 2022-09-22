@@ -9,7 +9,7 @@
   </div>
 </template>
 <script lang="ts">
-import Cascader from "../../lib/Cascader.vue";
+import {Cascader} from "../../lib/index";
 import { ref } from "vue";
 export default {
   components: {

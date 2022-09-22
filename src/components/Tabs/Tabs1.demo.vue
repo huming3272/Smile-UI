@@ -14,8 +14,8 @@
   </div>
 </template>
 <script lang="ts">
-  import Tab from '../../lib/Tab.vue'
-  import Tabs from '../../lib/Tabs.vue'
+  import { Tab } from '../../lib/index'
+  import { Tabs } from '../../lib/index'
   import { ref } from 'vue'
   export default{
     components:{

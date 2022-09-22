@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-npm install Smile-Ui
+npm install wheel-smile-ui
 ```
 
 或
 
 ```
-yarn add Smile-Ui
+yarn add wheel-smile-ui
 ```
 
 下一节：[开始使用](#/doc/get-started)

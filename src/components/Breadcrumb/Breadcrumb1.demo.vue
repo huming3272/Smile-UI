@@ -7,7 +7,7 @@
     </div>
 </template>
 <script lang="ts">
-    import Breadcrumb from '../../lib/Breadcrumb.vue'
+    import {Breadcrumb} from '../../lib/index'
     // 记得安装vue-router
     export default{
         components: {
