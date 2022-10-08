@@ -21,13 +21,18 @@
   </div>
 </template>
 <script lang="ts">
-import {defineAsyncComponent, ref, reactive} from 'vue'
+import { ref } from 'vue'
 
 export default {
   // 参考https://wenku.baidu.com/view/179a1af130d4b14e852458fb770bf78a65293a67.html
   // https://dandelioncloud.cn/article/details/1488173854068690945
   // https://dandelioncloud.cn/article/details/1426183821665615874
   name: "CascaderSelector",
+//   组件的名字有以下用途：
+//
+// 在组件自己的模板中递归引用自己时
+// 在 Vue 开发者工具中的组件树显示时
+// 在组件抛出的警告追踪栈信息中显示时
   // components:{
     // IniCascader: defineAsyncComponent(() => import('./CascaderSelector.vue'))
   // },

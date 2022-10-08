@@ -23,9 +23,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { ref } from "vue";
 export default {
   setup(prop, content) {
-    if (!useRouter?.() || !useRoute?.()){
-      
-    }
+
     const getRouteList = (target) => {
       return target.matched.map((ele) => {
         return {

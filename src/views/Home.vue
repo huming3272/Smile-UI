@@ -5,10 +5,11 @@
       <h1>斯迈尔 UI</h1>
       <h2>一个自认为不错的 UI 框架</h2>
       <p class="actions">
-        <a href="https://github.com">GitHub</a>
+        <a :href="link" target="_blank">源码</a>
         <router-link to="/doc/intro">开始</router-link>
       </p>
     </div>
+  </div>
     <div class="features">
       <ul>
         <li>
@@ -35,15 +36,28 @@
         </li>
       </ul>
     </div>
-  </div>
+
 </template>
 <script lang="ts">
 import Topnav from "../components/Topnav.vue";
+import { ref, } from "vue"
 export default {
   components: {
     Topnav,
   },
-  
+  setup() {
+    let giteeLink = 'https://gitee.com/huming3272/vue3-smile-ui'
+    let gitLink = 'https://github.com/huming3272/Smile-UI'
+    let link = ref('')
+    if (window.location.href.indexOf('github') > -1){
+      link.value = gitLink
+    }else{
+      link.value = giteeLink
+    }
+    return {
+      link
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -58,6 +72,7 @@ $color: #007974;
     rgba(53, 73, 94, 0.1) 0%,
    rgba(140, 196, 255, 0.8) 100%
   );
+  height: 50vh;
   // rgba(227, 255, 253, 1) 0%,
   //   rgba(183, 233, 230, 1) 100%
   clip-path: ellipse(80% 60% at 50% 40%);
